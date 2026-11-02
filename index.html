@@ -10,17 +10,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --cream:#f6efe3;
-  --paper:#fbf7f0;
-  --sand:#eadcc4;
+  --cream:#120e0b;
+  --paper:#1b1511;
+  --sand:#2a201a;
   --ochre:#c8893e;
-  --gold:#b8913f;
-  --pomegranate:#8e2b2b;
-  --indigo:#1f2f4a;
-  --olive:#5d6338;
-  --ink:#2a211b;
-  --muted:#7a6a5a;
-  --line:#dccbb0;
+  --gold:#c9a35a;
+  --pomegranate:#b13c35;
+  --indigo:#121a2b;
+  --olive:#6f7440;
+  --ink:#efe4d2;
+  --muted:#b3a38c;
+  --line:rgba(201,163,90,.22);
   --serif:'Cormorant Garamond', 'Times New Roman', serif;
   --sans:'Manrope', system-ui, sans-serif;
 }
@@ -40,7 +40,7 @@ a{color:inherit}
 .wrap{max-width:1160px;margin:0 auto;padding:0 24px}
 
 /* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:20;background:rgba(246,239,227,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:0;z-index:20;background:rgba(18,14,11,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
 .logo{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:.14em;text-decoration:none}
 .logo sup{font-size:10px;letter-spacing:0}
@@ -57,8 +57,8 @@ nav ul a:hover{color:var(--pomegranate)}
 @keyframes spin{to{transform:rotate(360deg)}}
 .eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--ochre);font-weight:600}
 .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(48px,8vw,104px);line-height:.95;margin:22px 0 26px;max-width:720px}
-.hero h1 em{color:var(--pomegranate);font-style:italic}
-.hero p.lead{font-size:19px;max-width:560px;color:#4a3d33}
+.hero h1 em{color:#d9604f;font-style:italic}
+.hero p.lead{font-size:19px;max-width:560px;color:#d9ccb8}
 .hero .meta{display:flex;flex-wrap:wrap;gap:34px;margin-top:46px}
 .hero .meta div{border-left:2px solid var(--ochre);padding-left:14px}
 .hero .meta b{display:block;font-family:var(--serif);font-size:38px;font-weight:500;line-height:1}
@@ -78,10 +78,10 @@ section{padding:96px 0}
 .mood-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
 .mood-card{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:26px 22px}
 .mood-card h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:8px}
-.mood-card p{font-size:14.5px;color:#55473c}
+.mood-card p{font-size:14.5px;color:#cbbca6}
 .palette{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
 .swatch{flex:1;min-width:110px;height:92px;border-radius:4px;display:flex;align-items:flex-end;padding:10px 12px;font-size:12px;color:#fff;letter-spacing:.04em}
-.swatch.light{color:var(--ink)}
+.swatch.light{color:#1a1410}
 
 /* ---------- rubrics ---------- */
 .rubrics{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
@@ -89,16 +89,16 @@ section{padding:96px 0}
 .rubric::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
 .rubric .num{font-family:var(--serif);font-size:15px;color:var(--c);font-weight:600;letter-spacing:.1em}
 .rubric h3{font-family:var(--serif);font-size:30px;font-weight:500;line-height:1.1;margin:8px 0 12px}
-.rubric p{font-size:15px;color:#55473c}
+.rubric p{font-size:15px;color:#cbbca6}
 .rubric .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
 .tag{font-size:12px;padding:4px 10px;border-radius:20px;background:var(--cream);border:1px solid var(--line);color:var(--muted)}
 .rubric .share{position:absolute;right:22px;top:24px;font-family:var(--serif);font-size:34px;color:var(--c);opacity:.85}
 
 /* ---------- calendar ---------- */
-.cal{background:var(--indigo);color:var(--cream);position:relative}
+.cal{background:var(--indigo);color:var(--ink);position:relative}
 .cal .sec-head p{color:#b9bfcc}
 .weeks-nav{display:flex;gap:10px;margin-bottom:34px;flex-wrap:wrap}
-.weeks-nav button{font:inherit;font-size:14px;padding:10px 18px;border-radius:30px;border:1px solid rgba(233,201,138,.4);background:transparent;color:var(--cream);cursor:pointer;transition:all .2s}
+.weeks-nav button{font:inherit;font-size:14px;padding:10px 18px;border-radius:30px;border:1px solid rgba(233,201,138,.4);background:transparent;color:var(--ink);cursor:pointer;transition:all .2s}
 .weeks-nav button.on,.weeks-nav button:hover{background:#e9c98a;color:var(--indigo);border-color:#e9c98a}
 .week{display:none}
 .week.on{display:block}
@@ -131,7 +131,7 @@ section{padding:96px 0}
 .vbody{padding:18px 18px 20px}
 .vbody .rub{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--c,var(--ochre))}
 .vbody h4{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.15;margin:6px 0 8px}
-.vbody p{font-size:14px;color:#55473c}
+.vbody p{font-size:14px;color:#cbbca6}
 .empty{border:1.5px dashed var(--line);border-radius:4px;padding:60px 24px;text-align:center;color:var(--muted)}
 .empty b{display:block;font-family:var(--serif);font-size:28px;font-weight:500;color:var(--ink);margin-bottom:6px}
 
@@ -140,15 +140,15 @@ section{padding:96px 0}
 .rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
 .rules-grid > div{padding:30px 30px}
 .rules-grid .yes{background:var(--cream)}
-.rules-grid .no{background:#efe5d6}
+.rules-grid .no{background:#221913}
 .rules-grid h3{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
 .rules-grid ul{list-style:none;display:grid;gap:12px;font-size:15px}
 .rules-grid li{display:grid;grid-template-columns:110px 1fr;gap:14px}
 .rules-grid li b{font-weight:600;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
 
 /* ---------- footer ---------- */
-footer{background:var(--ink);color:#cbbfae;padding:60px 0 40px;text-align:center}
-footer .logo{color:var(--cream);font-size:34px}
+footer{background:#0b0907;color:#b3a38c;padding:60px 0 40px;text-align:center}
+footer .logo{color:var(--ink);font-size:34px}
 footer p{margin-top:12px;font-size:14px}
 footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 
@@ -173,7 +173,7 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 
 /* ---------- collection ---------- */
 .coll{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-.coll p{font-size:17px;color:#4a3d33;margin-bottom:14px}
+.coll p{font-size:17px;color:#d9ccb8;margin-bottom:14px}
 .pillars{display:grid;gap:14px}
 .pillar{display:flex;gap:16px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px 20px}
 .pillar svg{flex:none;width:28px;height:28px;margin-top:2px}
@@ -190,16 +190,16 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 .pill{font-size:12px;padding:4px 11px;border-radius:20px;background:var(--cream);border:1px solid var(--line);color:var(--muted)}
 .pill.date{background:var(--c);border-color:var(--c);color:#fff}
 .idea h3{font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.08;margin-bottom:12px}
-.idea .about{font-size:15.5px;color:#4a3d33;margin-bottom:20px;max-width:640px}
+.idea .about{font-size:15.5px;color:#d9ccb8;margin-bottom:20px;max-width:640px}
 .steps{list-style:none;counter-reset:s;display:grid;gap:10px;margin-bottom:20px}
-.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:10px;font-size:14.5px;color:#4a3d33}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:10px;font-size:14.5px;color:#d9ccb8}
 .steps li::before{content:counter(s);width:26px;height:26px;border-radius:50%;border:1.5px solid var(--c);color:var(--c);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}
 .facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13.5px;color:var(--muted)}
 .facts b{color:var(--ink);font-weight:600}
-.idea .cap{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--pomegranate)}
+.idea .cap{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:21px;color:var(--gold)}
 .ref{align-self:start}
 .ref .lbl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600}
-.ref .note{font-size:13.5px;color:#55473c;margin-bottom:10px;font-style:italic}
+.ref .note{font-size:13.5px;color:#cbbca6;margin-bottom:10px;font-style:italic}
 .rvid{position:relative;aspect-ratio:9/16;border-radius:6px;overflow:hidden;background:#1b1612;cursor:pointer}
 .rvid video{width:100%;height:100%;object-fit:cover}
 .rvid .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .25s;background:linear-gradient(to top,rgba(0,0,0,.3),transparent 50%)}
@@ -213,12 +213,12 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 .orig{display:inline-block;margin-top:10px;font-size:13px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
 .orig:hover{color:var(--pomegranate)}
 .ref blockquote.instagram-media{margin:0!important;min-width:0!important;width:100%!important;max-width:340px!important;border-radius:6px!important}
-.ref .fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;aspect-ratio:4/5;background:var(--indigo);color:var(--cream);border-radius:6px;text-decoration:none;font-size:14px;text-align:center;padding:20px}
+.ref .fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;aspect-ratio:4/5;background:var(--indigo);color:var(--ink);border-radius:6px;text-decoration:none;font-size:14px;text-align:center;padding:20px}
 .ref .fallback svg{width:46px;height:46px;color:#e9c98a}
 .dialog{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:18px 20px;margin-bottom:20px;display:grid;gap:6px;font-size:15px}
 .dialog div{display:grid;grid-template-columns:88px 1fr;gap:10px}
 .dialog b{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:3px}
-.dialog .n{color:var(--pomegranate);font-family:var(--serif);font-size:18px;font-weight:600}
+.dialog .n{color:#e9a06f;font-family:var(--serif);font-size:18px;font-weight:600}
 
 /* ---------- timeline ---------- */
 .tl{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
@@ -228,7 +228,7 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 .tl-item .d b{display:block;font-family:var(--serif);font-size:30px;line-height:1;font-weight:500}
 .tl-item .d span{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#b9bfcc}
 .tl-item .t{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
-.tl-item .h{font-family:var(--serif);font-size:19px;line-height:1.2;color:var(--cream)}
+.tl-item .h{font-family:var(--serif);font-size:19px;line-height:1.2;color:var(--ink)}
 .tl-item:hover .h{color:#e9c98a}
 
 @media (max-width:960px){
@@ -243,6 +243,39 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
   .tl{grid-template-columns:1fr}
   .dialog div{grid-template-columns:1fr;gap:0}
 }
+
+/* ---------- dark + ornaments ---------- */
+body{background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c9a35a' stroke-opacity='.07' stroke-width='1'%3E%3Cpath d='M40 4 L76 40 L40 76 L4 40 Z'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3C/g%3E%3Cg fill='%23c9a35a' fill-opacity='.08'%3E%3Cellipse cx='40' cy='27' rx='3' ry='7'/%3E%3Cellipse cx='40' cy='53' rx='3' ry='7'/%3E%3Cellipse cx='27' cy='40' rx='7' ry='3'/%3E%3Cellipse cx='53' cy='40' rx='7' ry='3'/%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='80' cy='0' r='3'/%3E%3Ccircle cx='0' cy='80' r='3'/%3E%3Ccircle cx='80' cy='80' r='3'/%3E%3C/g%3E%3C/svg%3E")}
+section{background-color:transparent}
+.mood,.rules,#carousels{background:rgba(27,21,17,.75)!important}
+.cal{background:#0f1626!important}
+.divider .ros{width:46px;height:46px}
+.band{box-shadow:0 2px 0 #c9a35a,0 -2px 0 #c9a35a;margin:2px 0;background-color:#7d2522}
+.band.indigo{background-color:#1a2744}
+.idea,.mood-card,.pillar{background:linear-gradient(180deg,#201914,#19130f)}
+.idea::after{content:"";position:absolute;right:-34px;top:-34px;width:150px;height:150px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-60 -60 120 120'%3E%3Cg fill='%23c9a35a'%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(45)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(90)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(135)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(180)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(225)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(270)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='14' fill='none' stroke='%23c9a35a' stroke-width='3'/%3E%3Ccircle r='5' fill='%23c9a35a'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.13;pointer-events:none}
+.mood-card{position:relative;overflow:hidden}
+.mood-card::after{content:"";position:absolute;right:-22px;bottom:-22px;width:80px;height:80px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-60 -60 120 120'%3E%3Cg fill='%23c9a35a'%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(45)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(90)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(135)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(180)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(225)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(270)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='14' fill='none' stroke='%23c9a35a' stroke-width='3'/%3E%3Ccircle r='5' fill='%23c9a35a'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.12}
+.hero{background:radial-gradient(ellipse at 75% 40%, rgba(177,60,53,.22), transparent 55%),radial-gradient(ellipse at 10% 90%, rgba(201,163,90,.10), transparent 50%)}
+.hero .rosette-big{right:auto;left:62%;opacity:.35}
+.hero-photos{position:absolute;right:max(24px,calc((100vw - 1160px)/2));top:50%;transform:translateY(-50%);display:flex;gap:14px;align-items:center;z-index:1}
+.arch{border-radius:200px 200px 6px 6px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 0 0 6px var(--cream),0 0 0 7px rgba(201,163,90,.5),0 20px 50px rgba(0,0,0,.5)}
+.arch img{width:100%;height:100%;object-fit:cover}
+.hero-photos .arch:nth-child(1){width:170px;height:300px}
+.hero-photos .arch:nth-child(2){width:210px;height:380px}
+.hero-photos .arch:nth-child(3){width:170px;height:300px}
+.hero .wrap{z-index:2}
+.hero h1,.hero p.lead{text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.orns{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.orn{text-align:center}
+.orn .arch{aspect-ratio:3/4;margin-bottom:14px}
+.orn b{display:block;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink)}
+.orn span{font-size:13px;color:var(--muted)}
+.rphotos img,.rvid{border:1px solid rgba(201,163,90,.35)}
+@media (max-width:1100px){.hero-photos{position:relative;right:auto;top:auto;transform:none;justify-content:center;margin:48px auto 0;width:max-content;max-width:100%} .hero .rosette-big{left:auto;right:-200px}}
+@media (max-width:640px){.hero-photos{gap:10px}.hero-photos .arch:nth-child(1),.hero-photos .arch:nth-child(3){width:96px;height:170px}.hero-photos .arch:nth-child(2){width:124px;height:220px}}
+@media (max-width:900px){.orns{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.orns{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
@@ -298,6 +331,7 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
     <a href="#top" class="logo">ZHIWJ<sup>®</sup></a>
     <ul>
       <li><a href="#collection">Коллекция</a></li>
+      <li><a href="#ornaments">Орнаменты</a></li>
       <li><a href="#reels">Рилсы</a></li>
       <li><a href="#carousels">Карусели</a></li>
       <li><a href="#plan">Календарь</a></li>
@@ -312,8 +346,8 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
   <svg class="rosette-big" aria-hidden="true"><use href="#rosette"/></svg>
   <div class="wrap" style="position:relative">
     <div class="eyebrow">Контент-план Instagram · 9 ноября — 2 декабря 2026</div>
-    <h1>Классика, <em>расшитая</em> орнаментом</h1>
-    <p class="lead">План съёмок для новой коллекции пиджаков ZHIWJ: атлас, таджикский орнамент и строгий классический крой. Спокойно и красиво, без агрессивной рекламы. В центре внимания ремесло, детали и сама Нафиса.</p>
+    <h1 style="max-width:560px">Классика, <em>расшитая</em> орнаментом</h1>
+    <p class="lead" style="max-width:500px">План съёмок для новой коллекции пиджаков ZHIWJ: атлас, таджикский орнамент и строгий классический крой. Спокойно и красиво, без агрессивной рекламы. В центре внимания ремесло, детали и сама Нафиса.</p>
     <div class="meta">
       <div><b>5</b><span>рилсов</span></div>
       <div><b>6</b><span>фото-каруселей</span></div>
@@ -321,13 +355,14 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
       <div><b>3</b><span>публикации в неделю</span></div>
     </div>
   </div>
+  <div class="hero-photos" aria-hidden="true"><div class="arch"><img src="media/own-1.jpg" alt=""></div><div class="arch"><img src="media/own-5.jpg" alt=""></div><div class="arch"><img src="media/own-4.jpg" alt=""></div></div>
 </header>
 
 <div class="band indigo thin"></div>
 
 <section id="collection">
   <div class="wrap">
-    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
     <div class="coll">
       <div>
         <h2 style="font-family:var(--serif);font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1;margin-bottom:22px">Коллекция пиджаков</h2>
@@ -337,15 +372,33 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
       <div class="pillars">
         <div class="pillar"><svg style="color:var(--pomegranate)"><use href="#mini"/></svg><div><b>Атлас</b><span>Блеск и переливы ткани крупным планом, в движении и на свету</span></div></div>
         <div class="pillar"><svg style="color:var(--ochre)"><use href="#mini"/></svg><div><b>Орнамент</b><span>Таджикские узоры: что они значат и как их вышивают руками</span></div></div>
-        <div class="pillar"><svg style="color:var(--indigo)"><use href="#mini"/></svg><div><b>Классика</b><span>Строгий крой, чистые линии: такой пиджак носят в офис, на вечер и на праздник</span></div></div>
+        <div class="pillar"><svg style="color:#5a78ac"><use href="#mini"/></svg><div><b>Классика</b><span>Строгий крой, чистые линии: такой пиджак носят в офис, на вечер и на праздник</span></div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="band indigo thin"></div>
+<section id="ornaments">
+  <div class="wrap">
+    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
+    <div class="sec-head">
+      <h2>Орнаменты ZHIWJ</h2>
+      <p>Узоры с изделий бренда. Их снимаем крупно в каждом рилсе и на обложках каруселей: это главный герой визуала.</p>
+    </div>
+    <div class="orns">
+      <div class="orn"><div class="arch"><img src="media/orn-suzani.jpg" alt="Сюзани"></div><b>Сюзани</b><span>Солнечные розетки</span></div>
+      <div class="orn"><div class="arch"><img src="media/orn-gold.jpg" alt="Золотое шитьё"></div><b>Золотое шитьё</b><span>Пиджак Нафисы</span></div>
+      <div class="orn"><div class="arch"><img src="media/orn-hem.jpg" alt="Кайма"></div><b>Кайма</b><span>Платье «Махваш»</span></div>
+      <div class="orn"><div class="arch"><img src="media/orn-ikat.jpg" alt="Икат"></div><b>Икат и атлас</b><span>Платье «Фараджи»</span></div>
+      <div class="orn"><div class="arch"><img src="media/orn-crown.jpg" alt="Ручная вышивка"></div><b>Ручная работа</b><span>Каждый стежок вручную</span></div>
     </div>
   </div>
 </section>
 
 <section class="mood" id="mood">
   <div class="wrap">
-    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
     <div class="sec-head">
       <h2>Настроение</h2>
       <p>Тихая роскошь Шёлкового пути. Зритель должен почувствовать ткань и захотеть рассмотреть узор.</p>
@@ -357,11 +410,11 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
       <div class="mood-card"><h3>Слово</h3><p>Минимум текста в кадре. Короткие фразы, спокойный голос, субтитры.</p></div>
     </div>
     <div class="palette">
-      <div class="swatch" style="background:#8e2b2b">Гранат</div>
+      <div class="swatch" style="background:#9e2f2f">Гранат</div>
       <div class="swatch" style="background:#c8893e">Охра</div>
       <div class="swatch" style="background:#b8913f">Золото</div>
       <div class="swatch" style="background:#5d6338">Олива</div>
-      <div class="swatch" style="background:#1f2f4a">Индиго</div>
+      <div class="swatch" style="background:#22355a">Индиго</div>
       <div class="swatch light" style="background:#eadcc4">Лён</div>
     </div>
   </div>
@@ -371,7 +424,7 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 
 <section id="reels">
   <div class="wrap">
-    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
     <div class="sec-head">
       <h2>5 рилсов</h2>
       <p>У каждого рилса есть сценарий по кадрам и референс: ролик, на который ориентируемся по подаче и ритму.</p>
@@ -380,9 +433,10 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
   </div>
 </section>
 
+<div class="band thin"></div>
 <section id="carousels" style="background:var(--paper)">
   <div class="wrap">
-    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
     <div class="sec-head">
       <h2>6 фото-каруселей</h2>
       <p>Фотосессию снимаем у Нафисы в шоуруме или в студии 231inc. Из одной съёмки получается несколько каруселей.</p>
@@ -395,7 +449,7 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 
 <section class="cal" id="plan">
   <div class="wrap">
-    <div class="divider" style="color:#e9c98a"><svg><use href="#mini"/></svg></div>
+    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
     <div class="sec-head">
       <h2>Календарь публикаций</h2>
       <p>Публикуем в понедельник, среду и пятницу. Месяц начинается с тизера коллекции и заканчивается рилсом-диалогом. Нажмите на публикацию, чтобы открыть её сценарий.</p>
@@ -415,9 +469,10 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
   </div>
 </section>
 
+<div class="band indigo thin"></div>
 <section class="rules" id="rules">
   <div class="wrap">
-    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
     <div class="sec-head">
       <h2>Правила стиля</h2>
       <p>Короткая памятка для съёмки, монтажа и подписей. По ней сверяем каждую публикацию.</p>
@@ -457,7 +512,7 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 </footer>
 
 <script>
-const C = {pom:'#8e2b2b', ochre:'#c8893e', indigo:'#1f2f4a', olive:'#5d6338', gold:'#b8913f', plum:'#6b3a5a'};
+const C = {pom:'#b8433a', ochre:'#c8893e', indigo:'#5a78ac', olive:'#8b9150', gold:'#c9a35a', plum:'#a05f8c'};
 
 const REELS = [
   {id:'r1', c:C.pom, date:'Пн · 09.11', title:'Тизер коллекции: Нафиса за машинкой',
