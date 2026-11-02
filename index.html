@@ -200,6 +200,18 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 .ref{align-self:start}
 .ref .lbl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600}
 .ref .note{font-size:13.5px;color:#55473c;margin-bottom:10px;font-style:italic}
+.rvid{position:relative;aspect-ratio:9/16;border-radius:6px;overflow:hidden;background:#1b1612;cursor:pointer}
+.rvid video{width:100%;height:100%;object-fit:cover}
+.rvid .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .25s;background:linear-gradient(to top,rgba(0,0,0,.3),transparent 50%)}
+.rvid .play span{width:62px;height:62px;border-radius:50%;background:rgba(246,239,227,.92);display:flex;align-items:center;justify-content:center}
+.rvid.playing .play{opacity:0}
+.rphotos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.rphotos img{width:100%;aspect-ratio:1080/1398;object-fit:cover;border-radius:5px}
+.rphotos img:first-child{grid-column:1/-1}
+.rphotos.wide{grid-template-columns:1fr}
+.rphotos.wide img{aspect-ratio:3/2}
+.orig{display:inline-block;margin-top:10px;font-size:13px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
+.orig:hover{color:var(--pomegranate)}
 .ref blockquote.instagram-media{margin:0!important;min-width:0!important;width:100%!important;max-width:340px!important;border-radius:6px!important}
 .ref .fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;aspect-ratio:4/5;background:var(--indigo);color:var(--cream);border-radius:6px;text-decoration:none;font-size:14px;text-align:center;padding:20px}
 .ref .fallback svg{width:46px;height:46px;color:#e9c98a}
@@ -453,7 +465,7 @@ const REELS = [
    steps:['Статичный общий план: старая швейная машинка и стул на однотонном фоне (глубокий зелёный или гранатовый)','Нафиса в своём пиджаке из коллекции входит в кадр с отрезом атласа с орнаментом','Садится, расправляет ткань под иглой, начинает шить','Крупно: игла и атлас, переливы ткани','Резкий переход в чёрный, название коллекции и ZHIWJ'],
    facts:{'Длина':'15 с','Где':'Студия 231inc','Звук':'Низкий эмбиент + звук машинки'},
    cap:'Новая коллекция. Сшита вручную.',
-   ref:{url:'https://www.instagram.com/reel/DcQG9h8sSXr/', note:'Повторяем подачу: один кадр, фон, машинка. Снимаем с Нафисой.'}},
+   ref:{url:'https://www.instagram.com/reel/DcQG9h8sSXr/', video:'media/ref-03.mp4', poster:'media/ref-03.jpg', note:'Повторяем подачу: один кадр, фон, машинка. Снимаем с Нафисой.'}},
   {id:'r2', c:C.ochre, date:'Пн · 16.11', title:'Как рождается пиджак',
    about:'Процесс ручной работы: от атласа и лекал до вышитого орнамента. Показываем, почему каждый пиджак уникален.',
    steps:['Атлас разворачивают на столе, свет скользит по ткани','Мел и лекала: крой лацкана','Вышивка орнамента в макро, таймлапс','Примерка на манекене, булавки','Готовый пиджак на плечиках, медленный поворот'],
@@ -464,20 +476,20 @@ const REELS = [
    steps:['Кадр от подбородка до бёдер, модель стоит ровно, руки свободно','Переход движением: рука закрывает камеру, поворот или щелчок пальцами','С каждым переходом новый пиджак коллекции (5–7 моделей)','Между сменами — крупный план орнамента на лацкане или рукаве','Финал: все пиджаки на вешалке, логотип'],
    facts:{'Длина':'15–20 с','Где':'Студия 231inc, однотонный фон','Звук':'Ритмичный инструментал без слов'},
    cap:'Один крой. Семь характеров.',
-   ref:{url:'https://www.instagram.com/p/De9pNMDGQWc/', note:'Как в референсе: внимание на пиджаках, лицо модели не показываем.'}},
+   ref:{url:'https://www.instagram.com/p/De9pNMDGQWc/', photos:['media/ref-01-a.jpg','media/ref-01-b.jpg','media/ref-01-c.jpg'], note:'Как в референсе: внимание на пиджаках, лицо модели скрыто светом или тенью.'}},
   {id:'r4', c:C.plum, date:'Ср · 25.11', title:'Помада и новый образ',
    about:'Модель крупно красит губы, затем идёт к камере, и на ходу меняется образ. Женственность и уверенность классического пиджака.',
    steps:['Крупно: модель красит губы, отражение в зеркале','Отходит от зеркала и идёт к камере','На шаге — склейка, и она уже в другом пиджаке','Ещё 2–3 смены образа на ходу','Финал: модель останавливается, взгляд в камеру, логотип'],
    facts:{'Длина':'15–20 с','Где':'Студия или коридор с красивым светом','Звук':'Спокойный, уверенный бит'},
    cap:'Образ начинается с деталей',
-   ref:{url:'https://www.instagram.com/reel/DdjjdKoRryQ/', note:'Та же модель идёт, и на ходу меняется образ.'}},
+   ref:{url:'https://www.instagram.com/reel/DdjjdKoRryQ/', video:'media/ref-02.mp4', poster:'media/ref-02.jpg', note:'Приём из референса: крупный план в одном кадре и та же модель в глубине, на ходу меняется образ.'}},
   {id:'r5', c:C.gold, date:'Ср · 02.12', title:'Финал: телефонный диалог',
    about:'Закрываем месяц коротким остроумным диалогом. Нафиса в пиджаке из коллекции отвечает на звонок в винтажном кабинете.',
    dialog:[['Звонок','ZHIWJ, слушаю.'],['Голос','Атлас?'],['Нафиса','Да.'],['Голос','Орнамент?'],['Нафиса','Таджикский.'],['Голос','Ручная работа?'],['Нафиса','Каждый стежок.'],['Голос','Классика?'],['Нафиса','Всегда.'],['Голос','А чего вы не делаете?'],['Нафиса','Одинаковых вещей.']],
    steps:['Звонок старого телефона, Нафиса снимает трубку','Быстрые крупные планы: губы, рука на проводе, орнамент на рукаве, лацкан','Последняя реплика, пауза, улыбка в камеру','Кладёт трубку и уходит из кадра, логотип'],
    facts:{'Длина':'25–30 с','Где':'Кабинет или шоурум, винтажный телефон','Язык':'Таджикский или русский, субтитры'},
    cap:'Пишите — расскажем о каждом пиджаке',
-   ref:{url:'https://www.instagram.com/reel/De_tLLeOBt7/', note:'Заключительный рилс с диалогом. Вопросы и ответы о коллекции.'}}
+   ref:{url:'https://www.instagram.com/reel/De_tLLeOBt7/', video:'media/ref-05.mp4', poster:'media/ref-05.jpg', note:'Заключительный рилс с диалогом. Вопросы и ответы о коллекции.'}}
 ];
 
 const CAROUSELS = [
@@ -493,7 +505,7 @@ const CAROUSELS = [
    about:'Главная съёмка месяца. Снимаем у Нафисы в шоуруме или в студии 231inc. Из этой съёмки делаем и следующие карусели.',
    steps:['Обложка: самый сильный портрет в пиджаке','Полный рост на однотонном фоне','Сидя, детали рук и рукава','Пара кадров в движении','Пиджак с разными низами: брюки, юбка, джинсы'],
    facts:{'Слайдов':'8–10','Где':'Шоурум Нафисы или студия 231inc'}, cap:'Классика, расшитая орнаментом',
-   ref:{url:'https://www.instagram.com/p/DfFFAJCmDXa/', note:'Такую съёмку можно сделать у Нафисы или у нас в студии.'}},
+   ref:{url:'https://www.instagram.com/p/DfFFAJCmDXa/', photos:['media/ref-04-a.jpg','media/ref-04-b.jpg','media/ref-04-c.jpg'], wide:true, note:'Такую съёмку можно сделать у Нафисы или у нас в студии.'}},
   {id:'c4', c:C.olive, date:'Пн · 23.11', title:'Один пиджак — три образа',
    about:'Как носить пиджак ZHIWJ в разных ситуациях. Показываем, что это вещь не только для праздника.',
    steps:['Обложка: три образа рядом','Офис: брюки, белая рубашка','Вечер: платье или атласная юбка','Праздник или свадьба: с национальными украшениями','Финал: пиджак отдельно'],
@@ -510,10 +522,11 @@ const CAROUSELS = [
 
 function refBlock(r){
   if(!r) return '';
-  return `<div class="ref"><div class="lbl">Референс</div><div class="note">${r.note}</div>
-    <blockquote class="instagram-media" data-instgrm-permalink="${r.url}" data-instgrm-version="14">
-      <a class="fallback" href="${r.url}" target="_blank" rel="noopener"><svg><use href="#mini"/></svg>Смотреть референс в Instagram</a>
-    </blockquote></div>`;
+  let media = '';
+  if (r.video) media = `<div class="rvid"><video src="${r.video}" poster="${r.poster}" playsinline loop preload="none"></video><div class="play"><span><svg width="22" height="22" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="#8e2b2b"/></svg></span></div></div>`;
+  if (r.photos) media = `<div class="rphotos ${r.wide?'wide':''}">${r.photos.map(p=>`<img src="${p}" alt="Референс">`).join('')}</div>`;
+  return `<div class="ref"><div class="lbl">Референс</div><div class="note">${r.note}</div>${media}
+    <a class="orig" href="${r.url}" target="_blank" rel="noopener">Оригинал в Instagram ↗</a></div>`;
 }
 function ideaCard(x, i, kind){
   const dlg = x.dialog ? `<div class="dialog">${x.dialog.map(([w,t])=>`<div><b>${w}</b><span class="${w==='Нафиса'?'n':''}">${t}</span></div>`).join('')}</div>` : '';
@@ -532,6 +545,12 @@ function ideaCard(x, i, kind){
 }
 document.getElementById('reelList').innerHTML = REELS.map((x,i)=>ideaCard(x,i,'Рилс')).join('');
 document.getElementById('carList').innerHTML = CAROUSELS.map((x,i)=>ideaCard(x,i,'Карусель')).join('');
+document.addEventListener('click', e => {
+  const f = e.target.closest('.rvid'); if (!f) return;
+  const vid = f.querySelector('video');
+  document.querySelectorAll('.rvid video').forEach(x => { if (x !== vid) { x.pause(); x.parentElement.classList.remove('playing'); }});
+  if (vid.paused) { vid.play(); f.classList.add('playing'); } else { vid.pause(); f.classList.remove('playing'); }
+});
 
 // timeline
 const all = [...REELS.map(x=>({...x,k:'Рилс'})), ...CAROUSELS.map(x=>({...x,k:'Карусель'}))]
@@ -549,6 +568,5 @@ document.getElementById('timeline').innerHTML = weeks.map((w,wi)=>`
     </a>`).join('')}
   </div>`).join('');
 </script>
-<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
