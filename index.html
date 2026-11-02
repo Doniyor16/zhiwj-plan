@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ZHIWJ — контент-план</title>
-<meta name="description" content="Контент-план Instagram для ZHIWJ: рубрики, календарь съёмок и референсы.">
+<meta name="description" content="Контент-план Instagram для ZHIWJ: коллекция пиджаков, 5 рилсов, 6 каруселей и календарь.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
@@ -170,6 +170,67 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
   .hero .rosette-big{opacity:.12;width:520px;height:520px;right:-300px}
 }
 @media (prefers-reduced-motion:reduce){.hero .rosette-big use{animation:none}}
+
+/* ---------- collection ---------- */
+.coll{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+.coll p{font-size:17px;color:#4a3d33;margin-bottom:14px}
+.pillars{display:grid;gap:14px}
+.pillar{display:flex;gap:16px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px 20px}
+.pillar svg{flex:none;width:28px;height:28px;margin-top:2px}
+.pillar b{display:block;font-family:var(--serif);font-size:22px;font-weight:600}
+.pillar span{font-size:14px;color:var(--muted)}
+
+/* ---------- ideas ---------- */
+.ideas{display:grid;gap:26px}
+.idea{display:grid;grid-template-columns:1fr 340px;gap:36px;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:34px;position:relative;overflow:hidden}
+.idea::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
+.idea.noref{grid-template-columns:1fr}
+.idea .top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.idea .no{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.1em;color:var(--c)}
+.pill{font-size:12px;padding:4px 11px;border-radius:20px;background:var(--cream);border:1px solid var(--line);color:var(--muted)}
+.pill.date{background:var(--c);border-color:var(--c);color:#fff}
+.idea h3{font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.08;margin-bottom:12px}
+.idea .about{font-size:15.5px;color:#4a3d33;margin-bottom:20px;max-width:640px}
+.steps{list-style:none;counter-reset:s;display:grid;gap:10px;margin-bottom:20px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:10px;font-size:14.5px;color:#4a3d33}
+.steps li::before{content:counter(s);width:26px;height:26px;border-radius:50%;border:1.5px solid var(--c);color:var(--c);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13.5px;color:var(--muted)}
+.facts b{color:var(--ink);font-weight:600}
+.idea .cap{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:20px;color:var(--pomegranate)}
+.ref{align-self:start}
+.ref .lbl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600}
+.ref .note{font-size:13.5px;color:#55473c;margin-bottom:10px;font-style:italic}
+.ref blockquote.instagram-media{margin:0!important;min-width:0!important;width:100%!important;max-width:340px!important;border-radius:6px!important}
+.ref .fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;aspect-ratio:4/5;background:var(--indigo);color:var(--cream);border-radius:6px;text-decoration:none;font-size:14px;text-align:center;padding:20px}
+.ref .fallback svg{width:46px;height:46px;color:#e9c98a}
+.dialog{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:18px 20px;margin-bottom:20px;display:grid;gap:6px;font-size:15px}
+.dialog div{display:grid;grid-template-columns:88px 1fr;gap:10px}
+.dialog b{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:3px}
+.dialog .n{color:var(--pomegranate);font-family:var(--serif);font-size:18px;font-weight:600}
+
+/* ---------- timeline ---------- */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.tl-week h4{font-family:var(--serif);font-size:24px;font-weight:500;color:#e9c98a;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(233,201,138,.3)}
+.tl-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed rgba(233,201,138,.18);text-decoration:none}
+.tl-item .d{flex:none;width:52px}
+.tl-item .d b{display:block;font-family:var(--serif);font-size:30px;line-height:1;font-weight:500}
+.tl-item .d span{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#b9bfcc}
+.tl-item .t{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
+.tl-item .h{font-family:var(--serif);font-size:19px;line-height:1.2;color:var(--cream)}
+.tl-item:hover .h{color:#e9c98a}
+
+@media (max-width:960px){
+  .coll{grid-template-columns:1fr}
+  .idea{grid-template-columns:1fr}
+  .ref{max-width:340px}
+  .tl{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .idea{padding:24px 20px}
+  .idea h3{font-size:28px}
+  .tl{grid-template-columns:1fr}
+  .dialog div{grid-template-columns:1fr;gap:0}
+}
 </style>
 </head>
 <body>
@@ -224,10 +285,10 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
   <div class="wrap">
     <a href="#top" class="logo">ZHIWJ<sup>®</sup></a>
     <ul>
-      <li><a href="#mood">Настроение</a></li>
-      <li><a href="#rubrics">Рубрики</a></li>
+      <li><a href="#collection">Коллекция</a></li>
+      <li><a href="#reels">Рилсы</a></li>
+      <li><a href="#carousels">Карусели</a></li>
       <li><a href="#plan">Календарь</a></li>
-      <li><a href="#videos">Видео</a></li>
       <li><a href="#rules">Стиль</a></li>
     </ul>
   </div>
@@ -238,32 +299,50 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 <header class="hero" id="top">
   <svg class="rosette-big" aria-hidden="true"><use href="#rosette"/></svg>
   <div class="wrap" style="position:relative">
-    <div class="eyebrow">Контент-план Instagram · 9 ноября — 6 декабря 2026</div>
-    <h1>Каждая вещь — <em>история</em>, сшитая руками</h1>
-    <p class="lead">План для @_zhiwj_ на четыре недели: что снимаем, в каком настроении и о чём рассказываем. Без агрессивной рекламы: показываем ремесло, узоры и людей, которые за ними стоят.</p>
+    <div class="eyebrow">Контент-план Instagram · 9 ноября — 2 декабря 2026</div>
+    <h1>Классика, <em>расшитая</em> орнаментом</h1>
+    <p class="lead">План съёмок для новой коллекции пиджаков ZHIWJ: атлас, таджикский орнамент и строгий классический крой. Спокойно и красиво, без агрессивной рекламы. В центре внимания ремесло, детали и сама Нафиса.</p>
     <div class="meta">
-      <div><b>16</b><span>рилсов и каруселей</span></div>
-      <div><b>7</b><span>постоянных рубрик</span></div>
-      <div><b>4</b><span>публикации в неделю</span></div>
-      <div><b>3–5</b><span>сторис каждый день</span></div>
+      <div><b>5</b><span>рилсов</span></div>
+      <div><b>6</b><span>фото-каруселей</span></div>
+      <div><b>4</b><span>недели</span></div>
+      <div><b>3</b><span>публикации в неделю</span></div>
     </div>
   </div>
 </header>
 
 <div class="band indigo thin"></div>
 
+<section id="collection">
+  <div class="wrap">
+    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="coll">
+      <div>
+        <h2 style="font-family:var(--serif);font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1;margin-bottom:22px">Коллекция пиджаков</h2>
+        <p>Классический пиджак — вещь, которую понимают во всём мире. ZHIWJ добавляет в него то, чего нет больше ни у кого: атлас и таджикский орнамент, вышитый вручную.</p>
+        <p>Во всех публикациях месяца рассказываем одну мысль: <b>строгость и культура могут быть в одной вещи</b>. Каждый рилс и каждая карусель раскрывают её с новой стороны: процесс, детали, образ, человек.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><svg style="color:var(--pomegranate)"><use href="#mini"/></svg><div><b>Атлас</b><span>Блеск и переливы ткани крупным планом, в движении и на свету</span></div></div>
+        <div class="pillar"><svg style="color:var(--ochre)"><use href="#mini"/></svg><div><b>Орнамент</b><span>Таджикские узоры: что они значат и как их вышивают руками</span></div></div>
+        <div class="pillar"><svg style="color:var(--indigo)"><use href="#mini"/></svg><div><b>Классика</b><span>Строгий крой, чистые линии: такой пиджак носят в офис, на вечер и на праздник</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="mood" id="mood">
   <div class="wrap">
     <div class="divider"><svg><use href="#mini"/></svg></div>
     <div class="sec-head">
-      <h2>Тихая роскошь<br>Шёлкового пути</h2>
-      <p>Спокойно, тепло, с достоинством. Зритель должен почувствовать ткань, услышать шорох ножниц и захотеть рассмотреть узор.</p>
+      <h2>Настроение</h2>
+      <p>Тихая роскошь Шёлкового пути. Зритель должен почувствовать ткань и захотеть рассмотреть узор.</p>
     </div>
     <div class="mood-grid">
-      <div class="mood-card"><h3>Свет</h3><p>Мягкий и тёплый: золотой час, окно мастерской, свечи. Никакой вспышки и холодного белого.</p></div>
-      <div class="mood-card"><h3>Камера</h3><p>Медленные проезды, крупно руки и ткань, статичные кадры-картины. 3–6 кадров на ролик.</p></div>
-      <div class="mood-card"><h3>Звук</h3><p>Рубоб, дутар, най, фортепиано. Живые звуки: ножницы, машинка, льющийся чай.</p></div>
-      <div class="mood-card"><h3>Слово</h3><p>Спокойный голос за кадром на таджикском или русском, с субтитрами. Одна короткая фраза в кадре.</p></div>
+      <div class="mood-card"><h3>Свет</h3><p>Мягкий тёплый свет, чтобы атлас переливался. Никакой вспышки и холодного белого.</p></div>
+      <div class="mood-card"><h3>Камера</h3><p>Медленные проезды, крупно руки, ткань и орнамент, статичные кадры-картины.</p></div>
+      <div class="mood-card"><h3>Звук</h3><p>Рубоб, дутар, фортепиано. Живые звуки: машинка, ножницы, шорох атласа.</p></div>
+      <div class="mood-card"><h3>Слово</h3><p>Минимум текста в кадре. Короткие фразы, спокойный голос, субтитры.</p></div>
     </div>
     <div class="palette">
       <div class="swatch" style="background:#8e2b2b">Гранат</div>
@@ -276,53 +355,51 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
   </div>
 </section>
 
-<section id="rubrics">
+<div class="band"></div>
+
+<section id="reels">
   <div class="wrap">
     <div class="divider"><svg><use href="#mini"/></svg></div>
     <div class="sec-head">
-      <h2>Рубрики</h2>
-      <p>Семь рубрик, которые чередуются каждую неделю. Процент — доля рубрики в публикациях месяца.</p>
+      <h2>5 рилсов</h2>
+      <p>У каждого рилса есть сценарий по кадрам и референс: ролик, на который ориентируемся по подаче и ритму.</p>
     </div>
-    <div class="rubrics" id="rubricList"></div>
+    <div class="ideas" id="reelList"></div>
   </div>
 </section>
 
-<div class="band"></div>
+<section id="carousels" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="sec-head">
+      <h2>6 фото-каруселей</h2>
+      <p>Фотосессию снимаем у Нафисы в шоуруме или в студии 231inc. Из одной съёмки получается несколько каруселей.</p>
+    </div>
+    <div class="ideas" id="carList"></div>
+  </div>
+</section>
+
+<div class="band indigo"></div>
 
 <section class="cal" id="plan">
   <div class="wrap">
     <div class="divider" style="color:#e9c98a"><svg><use href="#mini"/></svg></div>
     <div class="sec-head">
       <h2>Календарь публикаций</h2>
-      <p>Публикуем в понедельник, среду, пятницу и воскресенье. По понедельникам идёт сериал «Как рождается вещь»: весь месяц следим за одним платьем от ткани до примерки.</p>
+      <p>Публикуем в понедельник, среду и пятницу. Месяц начинается с тизера коллекции и заканчивается рилсом-диалогом. Нажмите на публикацию, чтобы открыть её сценарий.</p>
     </div>
-    <div class="weeks-nav" id="weeksNav"></div>
-    <div id="weeks"></div>
-
+    <div class="tl" id="timeline"></div>
     <div class="stories">
       <h3>Сторис<br>каждый день</h3>
       <ul>
-        <li>Утро в мастерской: чай, свет, первая нитка</li>
-        <li>Опросы «Какой цвет вышивки выбрать?»</li>
+        <li>Закулисье съёмок рилсов и фотосессии</li>
+        <li>Опросы «Какой пиджак ваш?»</li>
         <li>Наличие, размеры, цены и адрес шоурума</li>
+        <li>Крупные планы вышивки в процессе</li>
         <li>Репосты клиенток и отметок бренда</li>
-        <li>Закулисье съёмок рилсов этой недели</li>
-        <li>Хайлайты: Заказ · Мастерская · Коллекции · Отзывы · Доставка</li>
+        <li>Хайлайт «Пиджаки» со всеми моделями коллекции</li>
       </ul>
     </div>
-  </div>
-</section>
-
-<div class="band indigo"></div>
-
-<section id="videos">
-  <div class="wrap">
-    <div class="divider"><svg><use href="#mini"/></svg></div>
-    <div class="sec-head">
-      <h2>Видео и референсы</h2>
-      <p>Ролики, на которые ориентируемся по настроению, ритму и подаче. Нажмите на видео, чтобы посмотреть.</p>
-    </div>
-    <div class="vgrid" id="videoList"></div>
   </div>
 </section>
 
@@ -337,19 +414,19 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
       <div class="yes">
         <h3><svg width="22" height="22" style="color:var(--olive)"><use href="#mini"/></svg>Делаем</h3>
         <ul>
-          <li><b>Начало</b><span>Первые 2 секунды — самый красивый кадр: ткань, рука, пар от чая</span></li>
-          <li><b>Длина</b><span>15–40 секунд, одна мысль на ролик, 9:16</span></li>
-          <li><b>Финал</b><span>Фирменный кадр с логотипом ZHIWJ на ткани или чёрном фоне</span></li>
+          <li><b>Начало</b><span>Первые 2 секунды — самый красивый кадр: атлас, орнамент, руки</span></li>
+          <li><b>Длина</b><span>15–30 секунд, одна мысль на ролик, 9:16</span></li>
+          <li><b>Финал</b><span>Фирменный кадр с логотипом ZHIWJ</span></li>
           <li><b>Подпись</b><span>Строка-образ, 2–4 предложения истории, мягкое «Шьём на заказ»</span></li>
-          <li><b>Локации</b><span>Мастерская, шоурум, старые дворики, сад, чайхана, горы</span></li>
-          <li><b>Сетка</b><span>Обложки рилсов в одной гамме, чтобы профиль выглядел как галерея</span></li>
+          <li><b>Карусель</b><span>Первый слайд — самый сильный кадр, 6–10 слайдов, формат 4:5</span></li>
+          <li><b>Сетка</b><span>Обложки в одной гамме, чтобы профиль выглядел как галерея</span></li>
         </ul>
       </div>
       <div class="no">
         <h3><svg width="22" height="22" style="color:var(--pomegranate)"><use href="#mini"/></svg>Не делаем</h3>
         <ul>
           <li><b>Тон</b><span>«Скидка!», «Успей!», капслок, стрелки и таймеры</span></li>
-          <li><b>Монтаж</b><span>Нарезку из 20 кадров со склейкой каждую секунду</span></li>
+          <li><b>Монтаж</b><span>Склейки каждую секунду без смысла</span></li>
           <li><b>Музыка</b><span>Трэп и вирусные треки, которые спорят с одеждой</span></li>
           <li><b>Текст</b><span>Плашки с ценой в кадре и в первой строке подписи</span></li>
           <li><b>Свет</b><span>Холодный белый свет, вспышку, неоновые цвета</span></li>
@@ -368,115 +445,110 @@ footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
 </footer>
 
 <script>
-const RUBRICS = {
-  birth:  {n:'01', name:'Как рождается вещь', c:'#8e2b2b', share:'25%', text:'Путь одного изделия: эскиз, выбор ткани, крой, вышивка, готовое платье. Сериал из 3–4 эпизодов.', tags:['Рилс 20–40 с','Звуки мастерской']},
-  picture:{n:'02', name:'Живая картина', c:'#c8893e', share:'20%', text:'Одна красивая сцена-образ: модель, чай, цветы, горы. Почти без движения камеры, как ожившая миниатюра.', tags:['Рилс 10–15 с','Без текста']},
-  code:   {n:'03', name:'Код узора', c:'#1f2f4a', share:'15%', text:'Что значат гранат, птица Шохин, миндаль, солнце и цвета, и где их найти на изделиях ZHIWJ.', tags:['Карусель 6–8 слайдов','Рилс с голосом']},
-  hands:  {n:'04', name:'Руки мастериц', c:'#5d6338', share:'10%', text:'Портреты швей и вышивальщиц: имя, стаж, любимая часть работы, сколько часов уходит на изделие.', tags:['Рилс 30–45 с','Голос героини']},
-  nafisa: {n:'05', name:'Слово Нафисы', c:'#b8913f', share:'10%', text:'Основательница о вдохновении, коллекциях и культуре. Спокойно, как в беседе за чаем.', tags:['Рилс 30–60 с','Субтитры']},
-  wear:   {n:'06', name:'Как это носить', c:'#a0522d', share:'10%', text:'Национальный элемент в современном образе: город, офис, свадьба, Навруз, путешествие.', tags:['Карусель','Рилс 15 с']},
-  heroes: {n:'07', name:'Наши героини', c:'#6b3a5a', share:'10%', text:'Клиентки в ZHIWJ, их слова о вещах, события и коллаборации бренда.', tags:['Рилс','Карусель','Репост']}
-};
+const C = {pom:'#8e2b2b', ochre:'#c8893e', indigo:'#1f2f4a', olive:'#5d6338', gold:'#b8913f', plum:'#6b3a5a'};
 
-const WEEKS = [
-  {title:'Неделя 1 · Знакомство', sub:'Голос бренда и начало сериала', days:[
-    {d:'09',m:'ноя',w:'пн',r:'nafisa',t:'Почему ZHIWJ шьёт вручную',i:'Нафиса за столом с чаем, перебивки: мастерская, руки, ткань. Рассказ о том, зачем бренд держится за ручную работу.',cap:'Каждую вещь ZHIWJ кто-то долго держал в руках',f:'Рилс 40 с'},
-    {d:'11',m:'ноя',w:'ср',r:'birth',t:'Эпизод 1. Ткань',i:'Руки перебирают лён, хлопок и винтажные отрезы. Шорох ткани, свет из окна.',cap:'Всё начинается с ткани',f:'Рилс 20 с'},
-    {d:'13',m:'ноя',w:'пт',r:'picture',t:'Гранатовый сад',i:'Модель в гранатовом платье разламывает плод, зёрна падают в пиалу.',cap:'Осень пахнет гранатом',f:'Рилс 12 с'},
-    {d:'15',m:'ноя',w:'вс',r:'code',t:'Гранат в узорах',i:'Гранат как символ семьи и изобилия. Где он встречается на изделиях ZHIWJ.',cap:'Почему на наших платьях так часто гранат',f:'Карусель 7 слайдов'}
-  ]},
-  {title:'Неделя 2 · Ремесло', sub:'Люди и вещи в жизни', days:[
-    {d:'16',m:'ноя',w:'пн',r:'birth',t:'Эпизод 2. Крой',i:'Мел на ткани, крупно ножницы и звук разреза, лекала на столе.',cap:'Ножницы не торопятся',f:'Рилс 25 с'},
-    {d:'18',m:'ноя',w:'ср',r:'hands',t:'Знакомство со швеёй',i:'Портрет мастерицы: имя, стаж, любимая часть работы. Её голос, субтитры.',cap:'Познакомьтесь: руки, которые шьют ZHIWJ',f:'Рилс 40 с'},
-    {d:'20',m:'ноя',w:'пт',r:'wear',t:'Национальное на каждый день',i:'Чапан или жилет с вышивкой, джинсы и белая рубашка. Утро в Душанбе, кофе, улица.',cap:'Национальное — это не только праздник',f:'Рилс 15 с'},
-    {d:'22',m:'ноя',w:'вс',r:'picture',t:'Чайхана',i:'Дастархан, две подруги в ZHIWJ, пар над пиалами. Продолжение эстетики «Фараджи».',cap:'Время, которое не хочется торопить',f:'Рилс 12 с'}
-  ]},
-  {title:'Неделя 3 · Смыслы', sub:'Узоры, героини и вдохновение', days:[
-    {d:'23',m:'ноя',w:'пн',r:'birth',t:'Эпизод 3. Вышивка',i:'Тамбурная вышивка в макро: игла, нить, узор растёт. Таймлапс и живой звук.',cap:'Стежок за стежком',f:'Рилс 30 с'},
-    {d:'25',m:'ноя',w:'ср',r:'code',t:'Птица Шохин',i:'Что значит символ и как он появился на форме Shohin Airlines.',cap:'Птица, которая теперь летает над облаками',f:'Рилс 30 с с голосом'},
-    {d:'27',m:'ноя',w:'пт',r:'heroes',t:'Платье для праздника',i:'Клиентка на свадьбе или торжестве в ZHIWJ, пара её слов о платье (с её согласия).',cap:'Осень — время свадеб. И историй',f:'Рилс 20 с'},
-    {d:'29',m:'ноя',w:'вс',r:'nafisa',t:'Вдохновение Шёлкового пути',i:'Нафиса в музее или у старой архитектуры: что вдохновляет её в наследии региона.',cap:'Шёлковый путь не закончился — он в наших руках',f:'Рилс 45 с'}
-  ]},
-  {title:'Неделя 4 · Финал', sub:'Готовое платье и благодарность', days:[
-    {d:'30',m:'ноя',w:'пн',r:'birth',t:'Финал. Готово',i:'Последний шов, утюг, модель надевает платье, медленный поворот.',cap:'Вот она — вещь, за которой вы следили месяц',f:'Рилс 25 с'},
-    {d:'02',m:'дек',w:'ср',r:'wear',t:'Одно платье — три повода',i:'Будни, праздник, путешествие: одно изделие в трёх образах.',cap:'Одно платье, три жизни',f:'Карусель 5 слайдов'},
-    {d:'04',m:'дек',w:'пт',r:'picture',t:'Первый снег',i:'Горы, модель в стёганом чапане держит пиалу, пар от чая на морозе.',cap:'Первый снег и тёплый чапан',f:'Рилс 12 с'},
-    {d:'06',m:'дек',w:'вс',r:'hands',t:'Сколько рук у одного платья',i:'Мастерицы по очереди передают одно платье из рук в руки. Благодарность команде.',cap:'Сколько рук у одного платья?',f:'Рилс 30 с'}
-  ]}
+const REELS = [
+  {id:'r1', c:C.pom, date:'Пн · 09.11', title:'Тизер коллекции: Нафиса за машинкой',
+   about:'Открываем месяц одним спокойным кадром. Нафиса входит с отрезом атласа, садится за швейную машинку и начинает шить. Без слов, только звук машинки.',
+   steps:['Статичный общий план: старая швейная машинка и стул на однотонном фоне (глубокий зелёный или гранатовый)','Нафиса в своём пиджаке из коллекции входит в кадр с отрезом атласа с орнаментом','Садится, расправляет ткань под иглой, начинает шить','Крупно: игла и атлас, переливы ткани','Резкий переход в чёрный, название коллекции и ZHIWJ'],
+   facts:{'Длина':'15 с','Где':'Студия 231inc','Звук':'Низкий эмбиент + звук машинки'},
+   cap:'Новая коллекция. Сшита вручную.',
+   ref:{url:'https://www.instagram.com/reel/DcQG9h8sSXr/', note:'Повторяем подачу: один кадр, фон, машинка. Снимаем с Нафисой.'}},
+  {id:'r2', c:C.ochre, date:'Пн · 16.11', title:'Как рождается пиджак',
+   about:'Процесс ручной работы: от атласа и лекал до вышитого орнамента. Показываем, почему каждый пиджак уникален.',
+   steps:['Атлас разворачивают на столе, свет скользит по ткани','Мел и лекала: крой лацкана','Вышивка орнамента в макро, таймлапс','Примерка на манекене, булавки','Готовый пиджак на плечиках, медленный поворот'],
+   facts:{'Длина':'25–30 с','Где':'Мастерская ZHIWJ','Звук':'Фортепиано + звуки мастерской'},
+   cap:'Сколько часов в одном пиджаке?'},
+  {id:'r3', c:C.indigo, date:'Пт · 20.11', title:'Смена пиджаков',
+   about:'Акцент только на пиджаках: лицо модели не видно, кадр от подбородка до пояса. Пиджаки сменяют друг друга в ритм музыки.',
+   steps:['Кадр от подбородка до бёдер, модель стоит ровно, руки свободно','Переход движением: рука закрывает камеру, поворот или щелчок пальцами','С каждым переходом новый пиджак коллекции (5–7 моделей)','Между сменами — крупный план орнамента на лацкане или рукаве','Финал: все пиджаки на вешалке, логотип'],
+   facts:{'Длина':'15–20 с','Где':'Студия 231inc, однотонный фон','Звук':'Ритмичный инструментал без слов'},
+   cap:'Один крой. Семь характеров.',
+   ref:{url:'https://www.instagram.com/p/De9pNMDGQWc/', note:'Как в референсе: внимание на пиджаках, лицо модели не показываем.'}},
+  {id:'r4', c:C.plum, date:'Ср · 25.11', title:'Помада и новый образ',
+   about:'Модель крупно красит губы, затем идёт к камере, и на ходу меняется образ. Женственность и уверенность классического пиджака.',
+   steps:['Крупно: модель красит губы, отражение в зеркале','Отходит от зеркала и идёт к камере','На шаге — склейка, и она уже в другом пиджаке','Ещё 2–3 смены образа на ходу','Финал: модель останавливается, взгляд в камеру, логотип'],
+   facts:{'Длина':'15–20 с','Где':'Студия или коридор с красивым светом','Звук':'Спокойный, уверенный бит'},
+   cap:'Образ начинается с деталей',
+   ref:{url:'https://www.instagram.com/reel/DdjjdKoRryQ/', note:'Та же модель идёт, и на ходу меняется образ.'}},
+  {id:'r5', c:C.gold, date:'Ср · 02.12', title:'Финал: телефонный диалог',
+   about:'Закрываем месяц коротким остроумным диалогом. Нафиса в пиджаке из коллекции отвечает на звонок в винтажном кабинете.',
+   dialog:[['Звонок','ZHIWJ, слушаю.'],['Голос','Атлас?'],['Нафиса','Да.'],['Голос','Орнамент?'],['Нафиса','Таджикский.'],['Голос','Ручная работа?'],['Нафиса','Каждый стежок.'],['Голос','Классика?'],['Нафиса','Всегда.'],['Голос','А чего вы не делаете?'],['Нафиса','Одинаковых вещей.']],
+   steps:['Звонок старого телефона, Нафиса снимает трубку','Быстрые крупные планы: губы, рука на проводе, орнамент на рукаве, лацкан','Последняя реплика, пауза, улыбка в камеру','Кладёт трубку и уходит из кадра, логотип'],
+   facts:{'Длина':'25–30 с','Где':'Кабинет или шоурум, винтажный телефон','Язык':'Таджикский или русский, субтитры'},
+   cap:'Пишите — расскажем о каждом пиджаке',
+   ref:{url:'https://www.instagram.com/reel/De_tLLeOBt7/', note:'Заключительный рилс с диалогом. Вопросы и ответы о коллекции.'}}
 ];
 
-/* Видео: файлы лежат в папке videos/. Добавьте объект — карточка появится сама.
-   { file:'videos/01.mp4', poster:'videos/01.jpg', r:'picture', title:'...', note:'...' } */
-const VIDEOS = [];
+const CAROUSELS = [
+  {id:'c1', c:C.ochre, date:'Ср · 11.11', title:'Детали крупно',
+   about:'Первое знакомство с коллекцией через детали, до полного образа.',
+   steps:['Обложка: атлас с орнаментом в макро','Лацкан и вышивка','Пуговицы и манжета','Подкладка изнутри','Строчка ручной работы','Последний слайд: пиджак целиком'],
+   facts:{'Слайдов':'6–8','Формат':'4:5'}, cap:'Сначала — детали'},
+  {id:'c2', c:C.indigo, date:'Пт · 13.11', title:'Код орнамента',
+   about:'Что значат таджикские узоры на пиджаках коллекции. Каждый слайд — один символ и его смысл.',
+   steps:['Обложка: орнамент крупно и вопрос «Что здесь зашифровано?»','3–4 слайда: символ на пиджаке + короткое пояснение','Слайд про цвета: что значат гранатовый, золотой, индиго','Финал: пиджак целиком'],
+   facts:{'Слайдов':'6–8','Текст':'Коротко, тонкий шрифт'}, cap:'Узор, который говорит'},
+  {id:'c3', c:C.pom, date:'Ср · 18.11', title:'Фотосессия коллекции',
+   about:'Главная съёмка месяца. Снимаем у Нафисы в шоуруме или в студии 231inc. Из этой съёмки делаем и следующие карусели.',
+   steps:['Обложка: самый сильный портрет в пиджаке','Полный рост на однотонном фоне','Сидя, детали рук и рукава','Пара кадров в движении','Пиджак с разными низами: брюки, юбка, джинсы'],
+   facts:{'Слайдов':'8–10','Где':'Шоурум Нафисы или студия 231inc'}, cap:'Классика, расшитая орнаментом',
+   ref:{url:'https://www.instagram.com/p/DfFFAJCmDXa/', note:'Такую съёмку можно сделать у Нафисы или у нас в студии.'}},
+  {id:'c4', c:C.olive, date:'Пн · 23.11', title:'Один пиджак — три образа',
+   about:'Как носить пиджак ZHIWJ в разных ситуациях. Показываем, что это вещь не только для праздника.',
+   steps:['Обложка: три образа рядом','Офис: брюки, белая рубашка','Вечер: платье или атласная юбка','Праздник или свадьба: с национальными украшениями','Финал: пиджак отдельно'],
+   facts:{'Слайдов':'5–7','Формат':'4:5'}, cap:'Офис, вечер, праздник'},
+  {id:'c5', c:C.gold, date:'Пт · 27.11', title:'Нафиса и её коллекция',
+   about:'Портрет основательницы: откуда идея коллекции, что вдохновило. Её цитаты на слайдах.',
+   steps:['Обложка: портрет Нафисы в пиджаке','Нафиса в мастерской с эскизами','2–3 слайда с её цитатами о коллекции','Нафиса и мастерицы','Финал: подпись Нафисы'],
+   facts:{'Слайдов':'6–8','Текст':'Цитаты Нафисы'}, cap:'«Я хотела, чтобы классика говорила на нашем языке»'},
+  {id:'c6', c:C.plum, date:'Пн · 30.11', title:'Вся коллекция',
+   about:'Лукбук всех моделей коллекции. У каждого пиджака имя и короткое описание.',
+   steps:['Обложка: все модели в одном кадре','По слайду на каждый пиджак: имя, ткань, орнамент','Последний слайд: как заказать'],
+   facts:{'Слайдов':'8–10','Формат':'4:5'}, cap:'Вся коллекция в одном посте'}
+];
 
-// ---------- render ----------
-const rl = document.getElementById('rubricList');
-Object.values(RUBRICS).forEach(r => {
-  rl.insertAdjacentHTML('beforeend', `
-    <article class="rubric" style="--c:${r.c}">
-      <span class="share">${r.share}</span>
-      <div class="num">${r.n}</div>
-      <h3>${r.name}</h3>
-      <p>${r.text}</p>
-      <div class="tags">${r.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
-    </article>`);
-});
-
-const nav = document.getElementById('weeksNav'), wk = document.getElementById('weeks');
-WEEKS.forEach((w, i) => {
-  nav.insertAdjacentHTML('beforeend', `<button data-i="${i}" class="${i===0?'on':''}">Неделя ${i+1} · ${w.days[0].d}.${w.days[0].m==='ноя'?'11':'12'}</button>`);
-  wk.insertAdjacentHTML('beforeend', `
-    <div class="week ${i===0?'on':''}" data-i="${i}">
-      <div class="week-title">${w.title}</div>
-      <div class="week-sub">${w.sub}</div>
-      <div class="days">${w.days.map(d => { const r = RUBRICS[d.r]; return `
-        <div class="day" style="--c:${lighten(r.c)}">
-          <div class="date"><b>${d.d}</b><span>${d.w} · ${d.m}</span></div>
-          <div class="rub">${r.name}</div>
-          <h4>${d.t}</h4>
-          <p>${d.i}</p>
-          <div class="cap">«${d.cap}»</div>
-          <div class="fmt">${d.f}</div>
-        </div>`}).join('')}</div>
-    </div>`);
-});
-nav.addEventListener('click', e => {
-  const b = e.target.closest('button'); if (!b) return;
-  nav.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
-  wk.querySelectorAll('.week').forEach(x => x.classList.toggle('on', x.dataset.i === b.dataset.i));
-});
-function lighten(hex){ // brighter tone for dark background
-  const n = parseInt(hex.slice(1),16); let r=n>>16, g=n>>8&255, b=n&255;
-  const k = .45; r=Math.round(r+(255-r)*k); g=Math.round(g+(255-g)*k); b=Math.round(b+(255-b)*k);
-  return `rgb(${r},${g},${b})`;
+function refBlock(r){
+  if(!r) return '';
+  return `<div class="ref"><div class="lbl">Референс</div><div class="note">${r.note}</div>
+    <blockquote class="instagram-media" data-instgrm-permalink="${r.url}" data-instgrm-version="14">
+      <a class="fallback" href="${r.url}" target="_blank" rel="noopener"><svg><use href="#mini"/></svg>Смотреть референс в Instagram</a>
+    </blockquote></div>`;
 }
-
-const vl = document.getElementById('videoList');
-if (!VIDEOS.length) {
-  vl.outerHTML = `<div class="empty"><b>Видео скоро появятся</b>Здесь будут референсы и первые снятые ролики.</div>`;
-} else {
-  VIDEOS.forEach(v => {
-    const r = RUBRICS[v.r] || {};
-    vl.insertAdjacentHTML('beforeend', `
-      <article class="vcard" style="--c:${r.c||'#c8893e'}">
-        <div class="vframe">
-          <video src="${v.file}" ${v.poster?`poster="${v.poster}"`:''} playsinline loop preload="metadata"></video>
-          <div class="play"><span><svg width="22" height="22" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="#8e2b2b"/></svg></span></div>
-        </div>
-        <div class="vbody">
-          ${r.name?`<div class="rub">${r.name}</div>`:''}
-          <h4>${v.title}</h4>
-          <p>${v.note||''}</p>
-        </div>
-      </article>`);
-  });
-  vl.addEventListener('click', e => {
-    const f = e.target.closest('.vframe'); if (!f) return;
-    const vid = f.querySelector('video');
-    document.querySelectorAll('.vframe video').forEach(x => { if (x !== vid) { x.pause(); x.parentElement.classList.remove('playing'); }});
-    if (vid.paused) { vid.play(); f.classList.add('playing'); } else { vid.pause(); f.classList.remove('playing'); }
-  });
+function ideaCard(x, i, kind){
+  const dlg = x.dialog ? `<div class="dialog">${x.dialog.map(([w,t])=>`<div><b>${w}</b><span class="${w==='Нафиса'?'n':''}">${t}</span></div>`).join('')}</div>` : '';
+  return `<article class="idea ${x.ref?'':'noref'}" id="${x.id}" style="--c:${x.c}">
+    <div>
+      <div class="top"><span class="no">${kind} ${String(i+1).padStart(2,'0')}</span><span class="pill date">${x.date}</span></div>
+      <h3>${x.title}</h3>
+      <p class="about">${x.about}</p>
+      ${dlg}
+      <ol class="steps">${x.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
+      <div class="facts">${Object.entries(x.facts).map(([k,v])=>`<span>${k}: <b>${v}</b></span>`).join('')}</div>
+      <div class="cap">«${x.cap}»</div>
+    </div>
+    ${refBlock(x.ref)}
+  </article>`;
 }
+document.getElementById('reelList').innerHTML = REELS.map((x,i)=>ideaCard(x,i,'Рилс')).join('');
+document.getElementById('carList').innerHTML = CAROUSELS.map((x,i)=>ideaCard(x,i,'Карусель')).join('');
+
+// timeline
+const all = [...REELS.map(x=>({...x,k:'Рилс'})), ...CAROUSELS.map(x=>({...x,k:'Карусель'}))]
+  .map(x=>{const [dd,mm]=x.date.split('· ')[1].split('.'); return {...x, dd, mm, wd:x.date.split(' ·')[0], key:+mm*100+ +dd};})
+  .sort((a,b)=>a.key-b.key);
+const weeks = [['Неделя 1',911,915],['Неделя 2',916,922],['Неделя 3',923,929],['Неделя 4',1130,1206]];
+const wk = k => k>=1130 ? 3 : k>=1123 ? 2 : k>=1116 ? 1 : 0;
+const light = h => {const n=parseInt(h.slice(1),16);let r=n>>16,g=n>>8&255,b=n&255;const t=.5;return `rgb(${Math.round(r+(255-r)*t)},${Math.round(g+(255-g)*t)},${Math.round(b+(255-b)*t)})`;};
+document.getElementById('timeline').innerHTML = weeks.map((w,wi)=>`
+  <div class="tl-week"><h4>${w[0]}</h4>
+  ${all.filter(x=>wk(x.key)===wi).map(x=>`
+    <a class="tl-item" href="#${x.id}">
+      <div class="d"><b>${x.dd}</b><span>${x.wd} · ${x.mm==='11'?'ноя':'дек'}</span></div>
+      <div><div class="t" style="color:${light(x.c)}">${x.k}</div><div class="h">${x.title}</div></div>
+    </a>`).join('')}
+  </div>`).join('');
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
