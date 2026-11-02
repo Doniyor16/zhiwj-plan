@@ -2,332 +2,174 @@
 <html lang="ru">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+</head>
+<body>
 <title>Контент-план ZHIWJ</title>
+<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="Контент-план Instagram для ZHIWJ: коллекция пиджаков, 5 рилсов, 6 каруселей и календарь.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
+/* Layout: one 1120px column on velvet black; gold thread is the only accent, the suzani sun is the only colour moment */
 :root{
-  --cream:#120e0b;
-  --paper:#1b1511;
-  --sand:#2a201a;
-  --ochre:#c8893e;
+  --bg:#13100d;
+  --surface:#1b1713;
+  --surface-2:#231d18;
+  --line:rgba(239,228,210,.09);
+  --text:#efe6d6;
+  --text-2:#c2b5a2;
+  --text-3:#8f8274;
   --gold:#c9a35a;
-  --pomegranate:#b13c35;
-  --indigo:#121a2b;
-  --olive:#6f7440;
-  --ink:#efe4d2;
-  --muted:#b3a38c;
-  --line:rgba(201,163,90,.22);
-  --serif:'Cormorant Garamond', 'Times New Roman', serif;
-  --sans:'Manrope', system-ui, sans-serif;
+  --madder:#7a2420;
+  --display:'Cormorant Garamond','Times New Roman',serif;
+  --body:'Manrope',system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+  color-scheme:dark;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
 img,video{display:block;max-width:100%}
 a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--display);font-weight:500;text-wrap:balance;line-height:1.05}
+.wrap{max-width:1168px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
 
-/* ---------- ornament bands ---------- */
-.band{height:28px;background-color:var(--pomegranate);
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cg fill='none' stroke='%23e9c98a' stroke-width='1.4'%3E%3Cpath d='M0 14 L14 2 L28 14 L14 26 Z'/%3E%3Cpath d='M28 14 L42 2 L56 14 L42 26 Z'/%3E%3C/g%3E%3Cg fill='%23e9c98a'%3E%3Ccircle cx='14' cy='14' r='3'/%3E%3Ccircle cx='42' cy='14' r='3'/%3E%3Ccircle cx='28' cy='14' r='1.4'/%3E%3Ccircle cx='0' cy='14' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
-  background-repeat:repeat-x;background-position:center}
-.band.indigo{background-color:var(--indigo)}
-.band.thin{height:14px;background-size:28px 14px}
+/* ikat band: top and bottom only */
+.band{height:24px;background:var(--madder) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cg fill='none' stroke='%23c9a35a' stroke-width='1.2'%3E%3Cpath d='M0 12 L12 2 L24 12 L12 22 Z'/%3E%3Cpath d='M24 12 L36 2 L48 12 L36 22 Z'/%3E%3C/g%3E%3Cg fill='%23c9a35a'%3E%3Ccircle cx='12' cy='12' r='2.5'/%3E%3Ccircle cx='36' cy='12' r='2.5'/%3E%3C/g%3E%3C/svg%3E") repeat-x center;border-block:2px solid var(--gold)}
 
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+/* signature: a gold machine stitch */
+.stitch{height:2px;background:repeating-linear-gradient(90deg,var(--gold) 0 8px,transparent 8px 16px);opacity:.7}
 
-/* ---------- nav ---------- */
-nav{position:sticky;top:0;z-index:20;background:rgba(18,14,11,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
-.logo{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:.14em;text-decoration:none}
+.logo{font-family:var(--display);font-weight:600;font-size:24px;letter-spacing:.12em;text-decoration:none}
 .logo sup{font-size:10px;letter-spacing:0}
-nav ul{display:flex;gap:26px;list-style:none;font-size:14px}
-nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
-nav ul a:hover{color:var(--pomegranate)}
+nav ul{display:flex;gap:28px;list-style:none;font-size:14px}
+nav ul a{text-decoration:none;color:var(--text-2);transition:color .15s var(--ease)}
+nav ul a:hover{color:var(--text)}
 
-/* ---------- hero ---------- */
-.hero{position:relative;padding:96px 0 110px;overflow:hidden;background:
-  radial-gradient(ellipse at 80% 20%, rgba(200,137,62,.18), transparent 55%),
-  radial-gradient(ellipse at 10% 90%, rgba(142,43,43,.10), transparent 50%), var(--cream)}
-.hero .rosette-big{position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:620px;height:620px;opacity:.9;pointer-events:none}
-.hero .rosette-big use{animation:spin 160s linear infinite;transform-origin:center}
-@keyframes spin{to{transform:rotate(360deg)}}
-.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--ochre);font-weight:600}
-.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(48px,8vw,104px);line-height:.95;margin:22px 0 26px;max-width:720px}
-.hero h1 em{color:#d9604f;font-style:italic}
-.hero p.lead{font-size:19px;max-width:560px;color:#d9ccb8}
-.hero .meta{display:flex;flex-wrap:wrap;gap:34px;margin-top:46px}
-.hero .meta div{border-left:2px solid var(--ochre);padding-left:14px}
-.hero .meta b{display:block;font-family:var(--serif);font-size:38px;font-weight:500;line-height:1}
-.hero .meta span{font-size:13px;color:var(--muted)}
+/* hero */
+.hero{padding-block:88px 96px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) 480px;gap:48px;align-items:center}
+.kicker{font-size:14px;color:var(--text-3)}
+.hero h1{font-size:clamp(48px,7.4vw,96px);margin-block:16px 24px}
+.hero h1 span{color:var(--gold)}
+.lead{font-size:18px;color:var(--text-2);max-width:520px}
+.summary{margin-top:32px;padding-top:20px;font-size:15px;color:var(--text-2);display:grid;gap:16px;max-width:520px}
+.summary b{color:var(--text);font-weight:500}
+.sun{width:480px;height:480px;max-width:100%}
 
-/* ---------- sections ---------- */
-section{padding:96px 0}
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:46px;flex-wrap:wrap}
-.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1}
-.sec-head p{max-width:440px;color:var(--muted)}
-.divider{display:flex;align-items:center;gap:14px;color:var(--gold);margin-bottom:18px}
-.divider::before,.divider::after{content:"";height:1px;flex:1;background:var(--line)}
-.divider svg{width:26px;height:26px}
+section{padding-block:96px}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:24px 48px;align-items:end;margin-bottom:48px}
+.head h2{font-size:clamp(40px,5vw,60px)}
+.head p{color:var(--text-2)}
 
-/* ---------- mood ---------- */
-.mood{background:var(--paper)}
-.mood-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.mood-card{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:26px 22px}
-.mood-card h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:8px}
-.mood-card p{font-size:14.5px;color:#cbbca6}
-.palette{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
-.swatch{flex:1;min-width:110px;height:92px;border-radius:4px;display:flex;align-items:flex-end;padding:10px 12px;font-size:12px;color:#fff;letter-spacing:.04em}
-.swatch.light{color:#1a1410}
+/* collection */
+.coll{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:64px;align-items:start}
+.coll h2{font-size:clamp(40px,5vw,60px);margin-bottom:24px}
+.coll p{font-size:17px;color:var(--text-2);margin-bottom:16px;max-width:600px}
+.coll p b{color:var(--text);font-weight:500}
+.terms{list-style:none;border-top:1px solid var(--line)}
+.terms li{display:grid;grid-template-columns:140px minmax(0,1fr);gap:16px;padding-block:20px;border-bottom:1px solid var(--line)}
+.terms b{font-family:var(--display);font-size:24px;font-weight:600;line-height:1.2}
+.terms span{color:var(--text-2);font-size:15px}
 
-/* ---------- rubrics ---------- */
-.rubrics{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
-.rubric{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:30px 26px 26px;overflow:hidden}
-.rubric::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
-.rubric .num{font-family:var(--serif);font-size:15px;color:var(--c);font-weight:600;letter-spacing:.1em}
-.rubric h3{font-family:var(--serif);font-size:30px;font-weight:500;line-height:1.1;margin:8px 0 12px}
-.rubric p{font-size:15px;color:#cbbca6}
-.rubric .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
-.tag{font-size:12px;padding:4px 10px;border-radius:20px;background:var(--cream);border:1px solid var(--line);color:var(--muted)}
-.rubric .share{position:absolute;right:22px;top:24px;font-family:var(--serif);font-size:34px;color:var(--c);opacity:.85}
+/* mood */
+.mood{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 64px}
+.palette{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:40px}
+.swatch{height:80px;border-radius:8px;display:flex;align-items:flex-end;padding:8px 12px;font-size:13px;color:#f4ecdf}
+.swatch.light{color:#1b1713}
 
-/* ---------- calendar ---------- */
-.cal{background:var(--indigo);color:var(--ink);position:relative}
-.cal .sec-head p{color:#b9bfcc}
-.weeks-nav{display:flex;gap:10px;margin-bottom:34px;flex-wrap:wrap}
-.weeks-nav button{font:inherit;font-size:14px;padding:10px 18px;border-radius:30px;border:1px solid rgba(233,201,138,.4);background:transparent;color:var(--ink);cursor:pointer;transition:all .2s}
-.weeks-nav button.on,.weeks-nav button:hover{background:#e9c98a;color:var(--indigo);border-color:#e9c98a}
-.week{display:none}
-.week.on{display:block}
-.week-title{font-family:var(--serif);font-size:28px;margin-bottom:6px}
-.week-sub{color:#b9bfcc;font-size:14px;margin-bottom:24px}
-.days{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.day{background:rgba(255,255,255,.05);border:1px solid rgba(233,201,138,.22);border-radius:4px;padding:22px 20px;display:flex;flex-direction:column}
-.day .date{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
-.day .date b{font-family:var(--serif);font-size:36px;font-weight:500;line-height:1;color:#e9c98a}
-.day .date span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b9bfcc}
-.day .rub{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--c);font-weight:600;margin-bottom:6px}
-.day h4{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.15;margin-bottom:10px}
-.day p{font-size:14px;color:#d7d9df;flex:1}
-.day .cap{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(233,201,138,.3);font-family:var(--serif);font-style:italic;font-size:17px;color:#f2e3c4}
-.day .fmt{margin-top:10px;font-size:12px;color:#9aa3b5}
-.stories{margin-top:44px;display:grid;grid-template-columns:1.1fr 2fr;gap:26px;align-items:start;border-top:1px solid rgba(233,201,138,.22);padding-top:38px}
-.stories h3{font-family:var(--serif);font-size:32px;font-weight:500}
-.stories ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 26px;font-size:14.5px;color:#d7d9df}
-.stories li{padding-left:22px;position:relative}
-.stories li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;transform:rotate(45deg);border:1.5px solid #e9c98a}
-
-/* ---------- videos ---------- */
-.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
-.vcard{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
-.vframe{position:relative;aspect-ratio:9/16;background:#1b1612;overflow:hidden;cursor:pointer}
-.vframe video{width:100%;height:100%;object-fit:cover}
-.vframe .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .25s;background:linear-gradient(to top,rgba(0,0,0,.35),transparent 50%)}
-.vframe .play span{width:64px;height:64px;border-radius:50%;background:rgba(246,239,227,.92);display:flex;align-items:center;justify-content:center}
-.vframe.playing .play{opacity:0}
-.vbody{padding:18px 18px 20px}
-.vbody .rub{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--c,var(--ochre))}
-.vbody h4{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.15;margin:6px 0 8px}
-.vbody p{font-size:14px;color:#cbbca6}
-.empty{border:1.5px dashed var(--line);border-radius:4px;padding:60px 24px;text-align:center;color:var(--muted)}
-.empty b{display:block;font-family:var(--serif);font-size:28px;font-weight:500;color:var(--ink);margin-bottom:6px}
-
-/* ---------- rules ---------- */
-.rules{background:var(--paper)}
-.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
-.rules-grid > div{padding:30px 30px}
-.rules-grid .yes{background:var(--cream)}
-.rules-grid .no{background:#221913}
-.rules-grid h3{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.rules-grid ul{list-style:none;display:grid;gap:12px;font-size:15px}
-.rules-grid li{display:grid;grid-template-columns:110px 1fr;gap:14px}
-.rules-grid li b{font-weight:600;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
-
-/* ---------- footer ---------- */
-footer{background:#0b0907;color:#b3a38c;padding:60px 0 40px;text-align:center}
-footer .logo{color:var(--ink);font-size:34px}
-footer p{margin-top:12px;font-size:14px}
-footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
-
-@media (max-width:960px){
-  .mood-grid{grid-template-columns:1fr 1fr}
-  .days{grid-template-columns:1fr 1fr}
-  .stories{grid-template-columns:1fr}
-  .hero .rosette-big{opacity:.35;right:-260px}
-}
-@media (max-width:640px){
-  .wrap{padding:0 16px}
-  nav ul{display:none}
-  section{padding:68px 0}
-  .hero{padding:70px 0 80px}
-  .mood-grid,.days,.rules-grid{grid-template-columns:1fr}
-  .stories ul{grid-template-columns:1fr}
-  .rules-grid li{grid-template-columns:1fr;gap:2px}
-  .hero .meta{gap:22px}
-  .hero .rosette-big{opacity:.12;width:520px;height:520px;right:-300px}
-}
-@media (prefers-reduced-motion:reduce){.hero .rosette-big use{animation:none}}
-
-/* ---------- collection ---------- */
-.coll{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
-.coll p{font-size:17px;color:#d9ccb8;margin-bottom:14px}
-.pillars{display:grid;gap:14px}
-.pillar{display:flex;gap:16px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:18px 20px}
-.pillar svg{flex:none;width:28px;height:28px;margin-top:2px}
-.pillar b{display:block;font-family:var(--serif);font-size:22px;font-weight:600}
-.pillar span{font-size:14px;color:var(--muted)}
-
-/* ---------- ideas ---------- */
-.ideas{display:grid;gap:26px}
-.idea{display:grid;grid-template-columns:1fr 340px;gap:36px;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:34px;position:relative;overflow:hidden}
-.idea::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c)}
-.idea.noref{grid-template-columns:1fr}
-.idea .top{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
-.idea .no{font-family:var(--serif);font-size:15px;font-weight:600;letter-spacing:.1em;color:var(--c)}
-.pill{font-size:12px;padding:4px 11px;border-radius:20px;background:var(--cream);border:1px solid var(--line);color:var(--muted)}
-.pill.date{background:var(--c);border-color:var(--c);color:#fff}
-.idea h3{font-family:var(--serif);font-size:34px;font-weight:500;line-height:1.08;margin-bottom:12px}
-.idea .about{font-size:15.5px;color:#d9ccb8;margin-bottom:20px;max-width:640px}
-.steps{list-style:none;counter-reset:s;display:grid;gap:10px;margin-bottom:20px}
-.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr;gap:10px;font-size:14.5px;color:#d9ccb8}
-.steps li::before{content:counter(s);width:26px;height:26px;border-radius:50%;border:1.5px solid var(--c);color:var(--c);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600}
-.facts{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:13.5px;color:var(--muted)}
-.facts b{color:var(--ink);font-weight:600}
-.idea .cap{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:21px;color:var(--gold)}
-.ref{align-self:start}
-.ref .lbl{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:600}
-.ref .note{font-size:13.5px;color:#cbbca6;margin-bottom:10px;font-style:italic}
-.rvid{position:relative;aspect-ratio:9/16;border-radius:6px;overflow:hidden;background:#000}
+/* ideas */
+.ideas{display:grid;gap:24px}
+.idea{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:48px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:40px}
+.idea.noref{grid-template-columns:minmax(0,1fr)}
+.meta{font-size:14px;color:var(--text-3);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.meta .when{color:var(--gold)}
+.idea h3{font-size:36px;margin-block:8px 12px}
+.about{color:var(--text-2);max-width:640px;margin-bottom:24px}
+.steps{list-style:none;counter-reset:s;display:grid;gap:12px;margin-bottom:24px;max-width:640px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:28px minmax(0,1fr);gap:12px;font-size:15px;color:var(--text-2)}
+.steps li::before{content:counter(s);width:24px;height:24px;border-radius:12px;border:1px solid rgba(201,163,90,.5);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:12px;font-variant-numeric:tabular-nums;margin-top:1px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;color:var(--text-3)}
+.facts b{color:var(--text);font-weight:500}
+.cap{margin-top:24px;padding-top:20px;display:grid;gap:4px}
+.cap small{font-size:13px;color:var(--text-3)}
+.cap q{font-family:var(--display);font-size:24px;line-height:1.2;color:var(--text);quotes:"«" "»"}
+.dialog{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:24px;display:grid;gap:4px;font-size:15px;max-width:520px}
+.dialog div{display:grid;grid-template-columns:80px minmax(0,1fr);gap:12px}
+.dialog b{font-size:13px;font-weight:400;color:var(--text-3);padding-top:2px}
+.dialog .n{color:var(--gold);font-weight:500}
+.ref{display:grid;gap:8px;align-content:start}
+.ref small{font-size:13px;color:var(--text-3)}
+.ref p{font-size:14px;color:var(--text-2);margin-bottom:4px}
+.rvid{aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#000;border:1px solid var(--line)}
 .rvid video{width:100%;height:100%;object-fit:cover}
-.rvid .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .25s;background:linear-gradient(to top,rgba(0,0,0,.3),transparent 50%)}
-.rvid .play span{width:62px;height:62px;border-radius:50%;background:rgba(246,239,227,.92);display:flex;align-items:center;justify-content:center}
-.rvid.playing .play{opacity:0}
 .rphotos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.rphotos img{width:100%;aspect-ratio:1080/1398;object-fit:cover;border-radius:5px}
+.rphotos img{width:100%;aspect-ratio:1080/1398;object-fit:cover;border-radius:8px}
 .rphotos img:first-child{grid-column:1/-1}
 .rphotos.wide{grid-template-columns:1fr}
 .rphotos.wide img{aspect-ratio:3/2}
-.orig{display:inline-block;margin-top:10px;font-size:13px;color:var(--muted);text-decoration:none;border-bottom:1px solid var(--line)}
-.orig:hover{color:var(--pomegranate)}
-.ref blockquote.instagram-media{margin:0!important;min-width:0!important;width:100%!important;max-width:340px!important;border-radius:6px!important}
-.ref .fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;aspect-ratio:4/5;background:var(--indigo);color:var(--ink);border-radius:6px;text-decoration:none;font-size:14px;text-align:center;padding:20px}
-.ref .fallback svg{width:46px;height:46px;color:#e9c98a}
-.dialog{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:18px 20px;margin-bottom:20px;display:grid;gap:6px;font-size:15px}
-.dialog div{display:grid;grid-template-columns:88px 1fr;gap:10px}
-.dialog b{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding-top:3px}
-.dialog .n{color:#e9a06f;font-family:var(--serif);font-size:18px;font-weight:600}
+.orig{font-size:13px;color:var(--text-3);text-decoration:none;justify-self:start;border-bottom:1px solid var(--line);transition:color .15s var(--ease)}
+.orig:hover{color:var(--text)}
 
-/* ---------- timeline ---------- */
-.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.tl-week h4{font-family:var(--serif);font-size:24px;font-weight:500;color:#e9c98a;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid rgba(233,201,138,.3)}
-.tl-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px dashed rgba(233,201,138,.18);text-decoration:none}
-.tl-item .d{flex:none;width:52px}
-.tl-item .d b{display:block;font-family:var(--serif);font-size:30px;line-height:1;font-weight:500}
-.tl-item .d span{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#b9bfcc}
-.tl-item .t{font-size:11.5px;text-transform:uppercase;letter-spacing:.08em;font-weight:600}
-.tl-item .h{font-family:var(--serif);font-size:19px;line-height:1.2;color:var(--ink)}
-.tl-item:hover .h{color:#e9c98a}
+/* calendar */
+.legend{display:flex;gap:24px;font-size:14px;color:var(--text-3);margin-bottom:24px}
+.dot{display:inline-block;width:8px;height:8px;border-radius:4px;background:var(--gold);margin-right:8px;vertical-align:1px}
+.dot.o{background:transparent;border:1.5px solid var(--gold)}
+.tl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.tl-week h4{font-family:var(--body);font-size:14px;font-weight:500;color:var(--text-3);padding-bottom:12px;border-bottom:1px solid var(--line)}
+.tl-item{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding-block:16px;border-bottom:1px solid var(--line);text-decoration:none}
+.tl-item .d b{display:block;font-family:var(--display);font-size:32px;font-weight:500;line-height:1;font-variant-numeric:tabular-nums}
+.tl-item .d span{font-size:12px;color:var(--text-3)}
+.tl-item .t{font-size:13px;color:var(--text-3)}
+.tl-item .h{font-family:var(--display);font-size:20px;line-height:1.2;color:var(--text);transition:color .15s var(--ease)}
+.tl-item:hover .h{color:var(--gold)}
+.stories{margin-top:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px}
+.stories h3{font-size:36px}
+.stories ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;color:var(--text-2);font-size:15px}
+.stories li{padding-left:24px;position:relative}
+.stories li::before{content:"";position:absolute;left:0;top:12px;width:12px;height:2px;background:var(--gold)}
 
-@media (max-width:960px){
-  .coll{grid-template-columns:1fr}
-  .idea{grid-template-columns:1fr}
-  .ref{max-width:340px}
+/* rules */
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:0 64px}
+.rules h3{font-size:32px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.rules ul{list-style:none}
+.rules li{display:grid;grid-template-columns:100px minmax(0,1fr);gap:16px;padding-block:14px;border-bottom:1px solid var(--line);font-size:15px;color:var(--text-2)}
+.rules li b{font-weight:400;font-size:14px;color:var(--text-3);padding-top:1px}
+
+footer{padding-block:56px 48px;text-align:center;color:var(--text-3);font-size:14px;display:grid;gap:8px}
+footer .logo{color:var(--text);font-size:32px}
+
+@media (max-width:1000px){
+  .hero .wrap{grid-template-columns:1fr}
+  .sun{width:360px;height:360px;justify-self:center}
+  .coll,.mood,.rules,.stories{grid-template-columns:1fr}
+  .head{grid-template-columns:1fr}
+  .idea{grid-template-columns:1fr;gap:32px}
+  .ref{max-width:360px}
   .tl{grid-template-columns:1fr 1fr}
+  .palette{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .rules > div + div{margin-top:48px}
 }
 @media (max-width:640px){
-  .idea{padding:24px 20px}
-  .idea h3{font-size:28px}
-  .tl{grid-template-columns:1fr}
-  .dialog div{grid-template-columns:1fr;gap:0}
+  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  nav ul{display:none}
+  section{padding-block:64px}
+  .hero{padding-block:56px 64px}
+  .sun{width:280px;height:280px}
+  .idea{padding:24px 20px;border-radius:12px}
+  .idea h3{font-size:30px}
+  .tl,.stories ul{grid-template-columns:1fr}
+  .terms li,.rules li,.dialog div{grid-template-columns:1fr;gap:2px}
 }
-
-/* ---------- dark + ornaments ---------- */
-body{background-color:var(--cream);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c9a35a' stroke-opacity='.07' stroke-width='1'%3E%3Cpath d='M40 4 L76 40 L40 76 L4 40 Z'/%3E%3Ccircle cx='40' cy='40' r='9'/%3E%3C/g%3E%3Cg fill='%23c9a35a' fill-opacity='.08'%3E%3Cellipse cx='40' cy='27' rx='3' ry='7'/%3E%3Cellipse cx='40' cy='53' rx='3' ry='7'/%3E%3Cellipse cx='27' cy='40' rx='7' ry='3'/%3E%3Cellipse cx='53' cy='40' rx='7' ry='3'/%3E%3Ccircle cx='0' cy='0' r='3'/%3E%3Ccircle cx='80' cy='0' r='3'/%3E%3Ccircle cx='0' cy='80' r='3'/%3E%3Ccircle cx='80' cy='80' r='3'/%3E%3C/g%3E%3C/svg%3E")}
-section{background-color:transparent}
-.mood,.rules,#carousels{background:rgba(27,21,17,.75)!important}
-.cal{background:#0f1626!important}
-.divider .ros{width:46px;height:46px}
-.band{box-shadow:0 2px 0 #c9a35a,0 -2px 0 #c9a35a;margin:2px 0;background-color:#7d2522}
-.band.indigo{background-color:#1a2744}
-.idea,.mood-card,.pillar{background:linear-gradient(180deg,#201914,#19130f)}
-.idea::after{content:"";position:absolute;right:-34px;top:-34px;width:150px;height:150px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-60 -60 120 120'%3E%3Cg fill='%23c9a35a'%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(45)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(90)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(135)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(180)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(225)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(270)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='14' fill='none' stroke='%23c9a35a' stroke-width='3'/%3E%3Ccircle r='5' fill='%23c9a35a'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.13;pointer-events:none}
-.mood-card{position:relative;overflow:hidden}
-.mood-card::after{content:"";position:absolute;right:-22px;bottom:-22px;width:80px;height:80px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-60 -60 120 120'%3E%3Cg fill='%23c9a35a'%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(45)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(90)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(135)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(180)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(225)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(270)'/%3E%3Cellipse cx='0' cy='-38' rx='8' ry='18' transform='rotate(315)'/%3E%3C/g%3E%3Ccircle r='14' fill='none' stroke='%23c9a35a' stroke-width='3'/%3E%3Ccircle r='5' fill='%23c9a35a'/%3E%3C/svg%3E") center/contain no-repeat;opacity:.12}
-.hero{background:radial-gradient(ellipse at 75% 40%, rgba(177,60,53,.22), transparent 55%),radial-gradient(ellipse at 10% 90%, rgba(201,163,90,.10), transparent 50%)}
-.hero .rosette-big{right:-60px;left:auto;opacity:1;width:600px;height:600px;filter:drop-shadow(0 30px 60px rgba(0,0,0,.6))}
-.hero .rosette-big use{animation-duration:240s}
-.hero-photos{position:absolute;right:max(24px,calc((100vw - 1160px)/2));top:50%;transform:translateY(-50%);display:flex;gap:14px;align-items:center;z-index:1}
-.arch{border-radius:200px 200px 6px 6px;overflow:hidden;border:2px solid var(--gold);box-shadow:0 0 0 6px var(--cream),0 0 0 7px rgba(201,163,90,.5),0 20px 50px rgba(0,0,0,.5)}
-.arch img{width:100%;height:100%;object-fit:cover}
-.hero-photos .arch:nth-child(1){width:170px;height:300px}
-.hero-photos .arch:nth-child(2){width:210px;height:380px}
-.hero-photos .arch:nth-child(3){width:170px;height:300px}
-.hero .wrap{z-index:2}
-.hero h1,.hero p.lead{text-shadow:0 2px 20px rgba(0,0,0,.6)}
-.orns{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.orn{text-align:center}
-.orn .arch{aspect-ratio:3/4;margin-bottom:14px}
-.orn .arch svg{width:100%;height:100%;display:block}
-.orn b{display:block;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--ink)}
-.orn span{font-size:13px;color:var(--muted)}
-.rphotos img,.rvid{border:1px solid rgba(201,163,90,.35)}
-@media (max-width:1100px){.hero .rosette-big{opacity:.28!important;right:-220px!important}.hero-photos{position:relative;right:auto;top:auto;transform:none;justify-content:center;margin:48px auto 0;width:max-content;max-width:100%} .hero .rosette-big{left:auto;right:-200px}}
-@media (max-width:640px){.hero-photos{gap:10px}.hero-photos .arch:nth-child(1),.hero-photos .arch:nth-child(3){width:96px;height:170px}.hero-photos .arch:nth-child(2){width:124px;height:220px}}
-@media (max-width:900px){.orns{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:560px){.orns{grid-template-columns:1fr 1fr}}
 </style>
-</head>
-<body>
 
-<!-- reusable suzani rosette -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <g id="petal8">
-      <ellipse cx="0" cy="-58" rx="16" ry="34"/>
-    </g>
-    <symbol id="rosette" viewBox="-200 -200 400 400">
-      <g fill="none" stroke="#b8913f" stroke-width="1.2" opacity=".55">
-        <circle r="196"/><circle r="186" stroke-dasharray="2 7"/>
-      </g>
-      <g fill="#8e2b2b" opacity=".9">
-        <g id="ring1">
-          <ellipse cx="0" cy="-150" rx="22" ry="38"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(30)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(60)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(90)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(120)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(150)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(180)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(210)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(240)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(270)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(300)"/>
-          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(330)"/>
-        </g>
-      </g>
-      <g fill="#c8893e">
-        <circle cx="0" cy="-150" r="7"/><circle cx="0" cy="-150" r="7" transform="rotate(30)"/><circle cx="0" cy="-150" r="7" transform="rotate(60)"/><circle cx="0" cy="-150" r="7" transform="rotate(90)"/><circle cx="0" cy="-150" r="7" transform="rotate(120)"/><circle cx="0" cy="-150" r="7" transform="rotate(150)"/><circle cx="0" cy="-150" r="7" transform="rotate(180)"/><circle cx="0" cy="-150" r="7" transform="rotate(210)"/><circle cx="0" cy="-150" r="7" transform="rotate(240)"/><circle cx="0" cy="-150" r="7" transform="rotate(270)"/><circle cx="0" cy="-150" r="7" transform="rotate(300)"/><circle cx="0" cy="-150" r="7" transform="rotate(330)"/>
-      </g>
-      <circle r="104" fill="#1f2f4a"/>
-      <g fill="#e9c98a">
-        <ellipse cx="0" cy="-66" rx="13" ry="30"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(45)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(90)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(135)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(180)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(225)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(270)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(315)"/>
-      </g>
-      <circle r="30" fill="#8e2b2b"/>
-      <circle r="30" fill="none" stroke="#e9c98a" stroke-width="2" stroke-dasharray="3 5"/>
-      <circle r="12" fill="#c8893e"/>
-      <circle r="104" fill="none" stroke="#e9c98a" stroke-width="1.5"/>
-      <circle r="96" fill="none" stroke="#e9c98a" stroke-width="1" stroke-dasharray="1 6"/>
-    </symbol>
-    <symbol id="sun" viewBox="-150 -150 300 300"><circle cx="0" cy="0" r="140" fill="#a8302b"/><polygon points="0.0,-130.2 11.6,-102.9 29.0,-126.9 34.2,-97.8 56.5,-117.3 55.1,-87.7 81.2,-101.8 73.3,-73.3 101.8,-81.2 87.7,-55.1 117.3,-56.5 97.8,-34.2 126.9,-29.0 102.9,-11.6 130.2,-0.0 102.9,11.6 126.9,29.0 97.8,34.2 117.3,56.5 87.7,55.1 101.8,81.2 73.3,73.3 81.2,101.8 55.1,87.7 56.5,117.3 34.2,97.8 29.0,126.9 11.6,102.9 0.0,130.2 -11.6,102.9 -29.0,126.9 -34.2,97.8 -56.5,117.3 -55.1,87.7 -81.2,101.8 -73.3,73.3 -101.8,81.2 -87.7,55.1 -117.3,56.5 -97.8,34.2 -126.9,29.0 -102.9,11.6 -130.2,0.0 -102.9,-11.6 -126.9,-29.0 -97.8,-34.2 -117.3,-56.5 -87.7,-55.1 -101.8,-81.2 -73.3,-73.3 -81.2,-101.8 -55.1,-87.7 -56.5,-117.3 -34.2,-97.8 -29.0,-126.9 -11.6,-102.9" fill="#e6b247"/><circle cx="0" cy="0" r="98.0" fill="#5e1a18"/><circle cx="0.0" cy="-98.0" r="11.9" fill="#5e1a18"/><circle cx="42.5" cy="-88.3" r="11.9" fill="#5e1a18"/><circle cx="76.6" cy="-61.1" r="11.9" fill="#5e1a18"/><circle cx="95.5" cy="-21.8" r="11.9" fill="#5e1a18"/><circle cx="95.5" cy="21.8" r="11.9" fill="#5e1a18"/><circle cx="76.6" cy="61.1" r="11.9" fill="#5e1a18"/><circle cx="42.5" cy="88.3" r="11.9" fill="#5e1a18"/><circle cx="0.0" cy="98.0" r="11.9" fill="#5e1a18"/><circle cx="-42.5" cy="88.3" r="11.9" fill="#5e1a18"/><circle cx="-76.6" cy="61.1" r="11.9" fill="#5e1a18"/><circle cx="-95.5" cy="21.8" r="11.9" fill="#5e1a18"/><circle cx="-95.5" cy="-21.8" r="11.9" fill="#5e1a18"/><circle cx="-76.6" cy="-61.1" r="11.9" fill="#5e1a18"/><circle cx="-42.5" cy="-88.3" r="11.9" fill="#5e1a18"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(0.0 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(25.714285714285715 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(51.42857142857143 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(77.14285714285714 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(102.85714285714286 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(128.57142857142858 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(154.28571428571428 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(180.0 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(205.71428571428572 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(231.42857142857142 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(257.14285714285717 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(282.85714285714283 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(308.57142857142856 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(334.2857142857143 0 0)"/><circle cx="0" cy="0" r="61.6" fill="#e6b247"/><polygon points="0.0,-58.8 13.0,-39.9 34.6,-47.6 34.0,-24.7 55.9,-18.2 42.0,-0.0 55.9,18.2 34.0,24.7 34.6,47.6 13.0,39.9 0.0,58.8 -13.0,39.9 -34.6,47.6 -34.0,24.7 -55.9,18.2 -42.0,0.0 -55.9,-18.2 -34.0,-24.7 -34.6,-47.6 -13.0,-39.9" fill="#a8302b"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(0.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(45.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(90.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(135.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(180.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(225.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(270.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(315.0 0 0)"/><circle cx="0" cy="0" r="16.8" fill="#e6b247"/><circle cx="0" cy="0" r="7.0" fill="#5e1a18"/><circle cx="0.0" cy="-146.0" r="3" fill="#d9a441"/><circle cx="25.4" cy="-143.8" r="3" fill="#d9a441"/><circle cx="49.9" cy="-137.2" r="3" fill="#d9a441"/><circle cx="73.0" cy="-126.4" r="3" fill="#d9a441"/><circle cx="93.8" cy="-111.8" r="3" fill="#d9a441"/><circle cx="111.8" cy="-93.8" r="3" fill="#d9a441"/><circle cx="126.4" cy="-73.0" r="3" fill="#d9a441"/><circle cx="137.2" cy="-49.9" r="3" fill="#d9a441"/><circle cx="143.8" cy="-25.4" r="3" fill="#d9a441"/><circle cx="146.0" cy="-0.0" r="3" fill="#d9a441"/><circle cx="143.8" cy="25.4" r="3" fill="#d9a441"/><circle cx="137.2" cy="49.9" r="3" fill="#d9a441"/><circle cx="126.4" cy="73.0" r="3" fill="#d9a441"/><circle cx="111.8" cy="93.8" r="3" fill="#d9a441"/><circle cx="93.8" cy="111.8" r="3" fill="#d9a441"/><circle cx="73.0" cy="126.4" r="3" fill="#d9a441"/><circle cx="49.9" cy="137.2" r="3" fill="#d9a441"/><circle cx="25.4" cy="143.8" r="3" fill="#d9a441"/><circle cx="0.0" cy="146.0" r="3" fill="#d9a441"/><circle cx="-25.4" cy="143.8" r="3" fill="#d9a441"/><circle cx="-49.9" cy="137.2" r="3" fill="#d9a441"/><circle cx="-73.0" cy="126.4" r="3" fill="#d9a441"/><circle cx="-93.8" cy="111.8" r="3" fill="#d9a441"/><circle cx="-111.8" cy="93.8" r="3" fill="#d9a441"/><circle cx="-126.4" cy="73.0" r="3" fill="#d9a441"/><circle cx="-137.2" cy="49.9" r="3" fill="#d9a441"/><circle cx="-143.8" cy="25.4" r="3" fill="#d9a441"/><circle cx="-146.0" cy="0.0" r="3" fill="#d9a441"/><circle cx="-143.8" cy="-25.4" r="3" fill="#d9a441"/><circle cx="-137.2" cy="-49.9" r="3" fill="#d9a441"/><circle cx="-126.4" cy="-73.0" r="3" fill="#d9a441"/><circle cx="-111.8" cy="-93.8" r="3" fill="#d9a441"/><circle cx="-93.8" cy="-111.8" r="3" fill="#d9a441"/><circle cx="-73.0" cy="-126.4" r="3" fill="#d9a441"/><circle cx="-49.9" cy="-137.2" r="3" fill="#d9a441"/><circle cx="-25.4" cy="-143.8" r="3" fill="#d9a441"/></symbol>
-    <symbol id="mini" viewBox="-20 -20 40 40">
-      <g fill="currentColor"><ellipse cx="0" cy="-10" rx="4" ry="8"/><ellipse cx="0" cy="-10" rx="4" ry="8" transform="rotate(90)"/><ellipse cx="0" cy="-10" rx="4" ry="8" transform="rotate(180)"/><ellipse cx="0" cy="-10" rx="4" ry="8" transform="rotate(270)"/></g>
-      <circle r="4" fill="currentColor"/>
-    </symbol>
-  </defs>
-</svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="sun" viewBox="-150 -150 300 300"><circle cx="0" cy="0" r="140" fill="#a8302b"/><polygon points="0.0,-130.2 11.6,-102.9 29.0,-126.9 34.2,-97.8 56.5,-117.3 55.1,-87.7 81.2,-101.8 73.3,-73.3 101.8,-81.2 87.7,-55.1 117.3,-56.5 97.8,-34.2 126.9,-29.0 102.9,-11.6 130.2,-0.0 102.9,11.6 126.9,29.0 97.8,34.2 117.3,56.5 87.7,55.1 101.8,81.2 73.3,73.3 81.2,101.8 55.1,87.7 56.5,117.3 34.2,97.8 29.0,126.9 11.6,102.9 0.0,130.2 -11.6,102.9 -29.0,126.9 -34.2,97.8 -56.5,117.3 -55.1,87.7 -81.2,101.8 -73.3,73.3 -101.8,81.2 -87.7,55.1 -117.3,56.5 -97.8,34.2 -126.9,29.0 -102.9,11.6 -130.2,0.0 -102.9,-11.6 -126.9,-29.0 -97.8,-34.2 -117.3,-56.5 -87.7,-55.1 -101.8,-81.2 -73.3,-73.3 -81.2,-101.8 -55.1,-87.7 -56.5,-117.3 -34.2,-97.8 -29.0,-126.9 -11.6,-102.9" fill="#e6b247"/><circle cx="0" cy="0" r="98.0" fill="#5e1a18"/><circle cx="0.0" cy="-98.0" r="11.9" fill="#5e1a18"/><circle cx="42.5" cy="-88.3" r="11.9" fill="#5e1a18"/><circle cx="76.6" cy="-61.1" r="11.9" fill="#5e1a18"/><circle cx="95.5" cy="-21.8" r="11.9" fill="#5e1a18"/><circle cx="95.5" cy="21.8" r="11.9" fill="#5e1a18"/><circle cx="76.6" cy="61.1" r="11.9" fill="#5e1a18"/><circle cx="42.5" cy="88.3" r="11.9" fill="#5e1a18"/><circle cx="0.0" cy="98.0" r="11.9" fill="#5e1a18"/><circle cx="-42.5" cy="88.3" r="11.9" fill="#5e1a18"/><circle cx="-76.6" cy="61.1" r="11.9" fill="#5e1a18"/><circle cx="-95.5" cy="21.8" r="11.9" fill="#5e1a18"/><circle cx="-95.5" cy="-21.8" r="11.9" fill="#5e1a18"/><circle cx="-76.6" cy="-61.1" r="11.9" fill="#5e1a18"/><circle cx="-42.5" cy="-88.3" r="11.9" fill="#5e1a18"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(0.0 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(25.714285714285715 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(51.42857142857143 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(77.14285714285714 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(102.85714285714286 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(128.57142857142858 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(154.28571428571428 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(180.0 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(205.71428571428572 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(231.42857142857142 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(257.14285714285717 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(282.85714285714283 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(308.57142857142856 0 0)"/><ellipse cx="0" cy="-78.4" rx="7.0" ry="14.0" fill="#e6b247" transform="rotate(334.2857142857143 0 0)"/><circle cx="0" cy="0" r="61.6" fill="#e6b247"/><polygon points="0.0,-58.8 13.0,-39.9 34.6,-47.6 34.0,-24.7 55.9,-18.2 42.0,-0.0 55.9,18.2 34.0,24.7 34.6,47.6 13.0,39.9 0.0,58.8 -13.0,39.9 -34.6,47.6 -34.0,24.7 -55.9,18.2 -42.0,0.0 -55.9,-18.2 -34.0,-24.7 -34.6,-47.6 -13.0,-39.9" fill="#a8302b"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(0.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(45.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(90.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(135.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(180.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(225.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(270.0 0 0)"/><ellipse cx="0" cy="-28.0" rx="9.8" ry="16.8" fill="#5e1a18" transform="rotate(315.0 0 0)"/><circle cx="0" cy="0" r="16.8" fill="#e6b247"/><circle cx="0" cy="0" r="7.0" fill="#5e1a18"/><circle cx="0.0" cy="-146.0" r="3" fill="#d9a441"/><circle cx="25.4" cy="-143.8" r="3" fill="#d9a441"/><circle cx="49.9" cy="-137.2" r="3" fill="#d9a441"/><circle cx="73.0" cy="-126.4" r="3" fill="#d9a441"/><circle cx="93.8" cy="-111.8" r="3" fill="#d9a441"/><circle cx="111.8" cy="-93.8" r="3" fill="#d9a441"/><circle cx="126.4" cy="-73.0" r="3" fill="#d9a441"/><circle cx="137.2" cy="-49.9" r="3" fill="#d9a441"/><circle cx="143.8" cy="-25.4" r="3" fill="#d9a441"/><circle cx="146.0" cy="-0.0" r="3" fill="#d9a441"/><circle cx="143.8" cy="25.4" r="3" fill="#d9a441"/><circle cx="137.2" cy="49.9" r="3" fill="#d9a441"/><circle cx="126.4" cy="73.0" r="3" fill="#d9a441"/><circle cx="111.8" cy="93.8" r="3" fill="#d9a441"/><circle cx="93.8" cy="111.8" r="3" fill="#d9a441"/><circle cx="73.0" cy="126.4" r="3" fill="#d9a441"/><circle cx="49.9" cy="137.2" r="3" fill="#d9a441"/><circle cx="25.4" cy="143.8" r="3" fill="#d9a441"/><circle cx="0.0" cy="146.0" r="3" fill="#d9a441"/><circle cx="-25.4" cy="143.8" r="3" fill="#d9a441"/><circle cx="-49.9" cy="137.2" r="3" fill="#d9a441"/><circle cx="-73.0" cy="126.4" r="3" fill="#d9a441"/><circle cx="-93.8" cy="111.8" r="3" fill="#d9a441"/><circle cx="-111.8" cy="93.8" r="3" fill="#d9a441"/><circle cx="-126.4" cy="73.0" r="3" fill="#d9a441"/><circle cx="-137.2" cy="49.9" r="3" fill="#d9a441"/><circle cx="-143.8" cy="25.4" r="3" fill="#d9a441"/><circle cx="-146.0" cy="0.0" r="3" fill="#d9a441"/><circle cx="-143.8" cy="-25.4" r="3" fill="#d9a441"/><circle cx="-137.2" cy="-49.9" r="3" fill="#d9a441"/><circle cx="-126.4" cy="-73.0" r="3" fill="#d9a441"/><circle cx="-111.8" cy="-93.8" r="3" fill="#d9a441"/><circle cx="-93.8" cy="-111.8" r="3" fill="#d9a441"/><circle cx="-73.0" cy="-126.4" r="3" fill="#d9a441"/><circle cx="-49.9" cy="-137.2" r="3" fill="#d9a441"/><circle cx="-25.4" cy="-143.8" r="3" fill="#d9a441"/></symbol></defs></svg>
 
 <nav>
   <div class="wrap">
@@ -341,74 +183,68 @@ section{background-color:transparent}
     </ul>
   </div>
 </nav>
-
 <div class="band"></div>
 
 <header class="hero" id="top">
-  <svg class="rosette-big" aria-hidden="true"><use href="#sun"/></svg>
-  <div class="wrap" style="position:relative">
-    <div class="eyebrow">Контент-план Instagram · 9 ноября — 2 декабря 2026</div>
-    <h1 style="max-width:560px">Классика, <em>расшитая</em> орнаментом</h1>
-    <p class="lead" style="max-width:500px">План съёмок для новой коллекции пиджаков ZHIWJ: атлас, таджикский орнамент и строгий классический крой. Спокойно и красиво, без агрессивной рекламы. В центре внимания ремесло, детали и сама Нафиса.</p>
-    <div class="meta">
-      <div><b>5</b><span>рилсов</span></div>
-      <div><b>6</b><span>фото-каруселей</span></div>
-      <div><b>4</b><span>недели</span></div>
-      <div><b>3</b><span>публикации в неделю</span></div>
+  <div class="wrap">
+    <div>
+      <div class="kicker">Контент-план Instagram · 9 ноября — 2 декабря 2026</div>
+      <h1>Классика, <span>расшитая</span> орнаментом</h1>
+      <p class="lead">План съёмок для новой коллекции пиджаков ZHIWJ: атлас, таджикский орнамент и строгий классический крой. Спокойно и красиво, без агрессивной рекламы. В центре внимания ремесло, детали и сама Нафиса.</p>
+      <div class="summary">
+        <div class="stitch"></div>
+        <div><b>5 рилсов и 6 фото-каруселей</b> за четыре недели, по понедельникам, средам и пятницам</div>
+      </div>
     </div>
+    <svg class="sun" viewBox="-150 -150 300 300" role="img" aria-label="Розетка сюзани"><use href="#sun" x="-150" y="-150" width="300" height="300"/></svg>
   </div>
 </header>
 
-<div class="band indigo thin"></div>
+<div class="wrap"><div class="stitch"></div></div>
 
 <section id="collection">
-  <div class="wrap">
-    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
-    <div class="coll">
-      <div>
-        <h2 style="font-family:var(--serif);font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1;margin-bottom:22px">Коллекция пиджаков</h2>
-        <p>Классический пиджак — вещь, которую понимают во всём мире. ZHIWJ добавляет в него то, чего нет больше ни у кого: атлас и таджикский орнамент, вышитый вручную.</p>
-        <p>Во всех публикациях месяца рассказываем одну мысль: <b>строгость и культура могут быть в одной вещи</b>. Каждый рилс и каждая карусель раскрывают её с новой стороны: процесс, детали, образ, человек.</p>
-      </div>
-      <div class="pillars">
-        <div class="pillar"><svg style="color:var(--pomegranate)"><use href="#mini"/></svg><div><b>Атлас</b><span>Блеск и переливы ткани крупным планом, в движении и на свету</span></div></div>
-        <div class="pillar"><svg style="color:var(--ochre)"><use href="#mini"/></svg><div><b>Орнамент</b><span>Таджикские узоры: что они значат и как их вышивают руками</span></div></div>
-        <div class="pillar"><svg style="color:#5a78ac"><use href="#mini"/></svg><div><b>Классика</b><span>Строгий крой, чистые линии: такой пиджак носят в офис, на вечер и на праздник</span></div></div>
-      </div>
+  <div class="wrap coll">
+    <div>
+      <h2>Коллекция пиджаков</h2>
+      <p>Классический пиджак — вещь, которую понимают во всём мире. ZHIWJ добавляет в него то, чего нет больше ни у кого: атлас и таджикский орнамент, вышитый вручную.</p>
+      <p>Во всех публикациях месяца рассказываем одну мысль: <b>строгость и культура могут быть в одной вещи</b>. Каждый рилс и каждая карусель раскрывают её с новой стороны: процесс, детали, образ, человек.</p>
     </div>
+    <ul class="terms">
+      <li><b>Атлас</b><span>Блеск и переливы ткани крупным планом, в движении и на свету</span></li>
+      <li><b>Орнамент</b><span>Таджикские узоры: что они значат и как их вышивают руками</span></li>
+      <li><b>Классика</b><span>Строгий крой, чистые линии: такой пиджак носят в офис, на вечер и на праздник</span></li>
+    </ul>
   </div>
 </section>
 
-<section class="mood" id="mood">
+<div class="wrap"><div class="stitch"></div></div>
+
+<section id="mood">
   <div class="wrap">
-    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
-    <div class="sec-head">
+    <div class="head">
       <h2>Настроение</h2>
       <p>Тихая роскошь Шёлкового пути. Зритель должен почувствовать ткань и захотеть рассмотреть узор.</p>
     </div>
-    <div class="mood-grid">
-      <div class="mood-card"><h3>Свет</h3><p>Мягкий тёплый свет, чтобы атлас переливался. Никакой вспышки и холодного белого.</p></div>
-      <div class="mood-card"><h3>Камера</h3><p>Медленные проезды, крупно руки, ткань и орнамент, статичные кадры-картины.</p></div>
-      <div class="mood-card"><h3>Звук</h3><p>Рубоб, дутар, фортепиано. Живые звуки: машинка, ножницы, шорох атласа.</p></div>
-      <div class="mood-card"><h3>Слово</h3><p>Минимум текста в кадре. Короткие фразы, спокойный голос, субтитры.</p></div>
+    <div class="mood">
+      <ul class="terms"><li><b>Свет</b><span>Мягкий тёплый свет, чтобы атлас переливался. Никакой вспышки и холодного белого</span></li><li><b>Камера</b><span>Медленные проезды, крупно руки, ткань и орнамент, статичные кадры-картины</span></li></ul>
+      <ul class="terms"><li><b>Звук</b><span>Рубоб, дутар, фортепиано. Живые звуки: машинка, ножницы, шорох атласа</span></li><li><b>Слово</b><span>Минимум текста в кадре. Короткие фразы, спокойный голос, субтитры</span></li></ul>
     </div>
     <div class="palette">
       <div class="swatch" style="background:#9e2f2f">Гранат</div>
-      <div class="swatch" style="background:#c8893e">Охра</div>
-      <div class="swatch" style="background:#b8913f">Золото</div>
-      <div class="swatch" style="background:#5d6338">Олива</div>
+      <div class="swatch" style="background:#b97a35">Охра</div>
+      <div class="swatch" style="background:#a8873f">Золото</div>
+      <div class="swatch" style="background:#585d34">Олива</div>
       <div class="swatch" style="background:#22355a">Индиго</div>
-      <div class="swatch light" style="background:#eadcc4">Лён</div>
+      <div class="swatch light" style="background:#e6d8c0">Лён</div>
     </div>
   </div>
 </section>
 
-<div class="band"></div>
+<div class="wrap"><div class="stitch"></div></div>
 
 <section id="reels">
   <div class="wrap">
-    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
-    <div class="sec-head">
+    <div class="head">
       <h2>5 рилсов</h2>
       <p>У каждого рилса есть сценарий по кадрам и референс: ролик, на который ориентируемся по подаче и ритму.</p>
     </div>
@@ -416,11 +252,9 @@ section{background-color:transparent}
   </div>
 </section>
 
-<div class="band thin"></div>
-<section id="carousels" style="background:var(--paper)">
+<section id="carousels">
   <div class="wrap">
-    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
-    <div class="sec-head">
+    <div class="head">
       <h2>6 фото-каруселей</h2>
       <p>Фотосессию снимаем у Нафисы в шоуруме или в студии 231inc. Из одной съёмки получается несколько каруселей.</p>
     </div>
@@ -428,18 +262,18 @@ section{background-color:transparent}
   </div>
 </section>
 
-<div class="band indigo"></div>
+<div class="wrap"><div class="stitch"></div></div>
 
-<section class="cal" id="plan">
+<section id="plan">
   <div class="wrap">
-    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
-    <div class="sec-head">
+    <div class="head">
       <h2>Календарь публикаций</h2>
       <p>Публикуем в понедельник, среду и пятницу. Месяц начинается с тизера коллекции и заканчивается рилсом-диалогом. Нажмите на публикацию, чтобы открыть её сценарий.</p>
     </div>
+    <div class="legend"><span><i class="dot"></i>Рилс</span><span><i class="dot o"></i>Карусель</span></div>
     <div class="tl" id="timeline"></div>
     <div class="stories">
-      <h3>Сторис<br>каждый день</h3>
+      <h3>Сторис каждый день</h3>
       <ul>
         <li>Закулисье съёмок рилсов и фотосессии</li>
         <li>Опросы «Какой пиджак ваш?»</li>
@@ -452,17 +286,17 @@ section{background-color:transparent}
   </div>
 </section>
 
-<div class="band indigo thin"></div>
-<section class="rules" id="rules">
+<div class="wrap"><div class="stitch"></div></div>
+
+<section id="rules">
   <div class="wrap">
-    <div class="divider"><svg class="ros"><use href="#rosette"/></svg></div>
-    <div class="sec-head">
+    <div class="head">
       <h2>Правила стиля</h2>
       <p>Короткая памятка для съёмки, монтажа и подписей. По ней сверяем каждую публикацию.</p>
     </div>
-    <div class="rules-grid">
-      <div class="yes">
-        <h3><svg width="22" height="22" style="color:var(--olive)"><use href="#mini"/></svg>Делаем</h3>
+    <div class="rules">
+      <div>
+        <h3>Делаем</h3>
         <ul>
           <li><b>Начало</b><span>Первые 2 секунды — самый красивый кадр: атлас, орнамент, руки</span></li>
           <li><b>Длина</b><span>15–30 секунд, одна мысль на ролик, 9:16</span></li>
@@ -472,10 +306,10 @@ section{background-color:transparent}
           <li><b>Сетка</b><span>Обложки в одной гамме, чтобы профиль выглядел как галерея</span></li>
         </ul>
       </div>
-      <div class="no">
-        <h3><svg width="22" height="22" style="color:var(--pomegranate)"><use href="#mini"/></svg>Не делаем</h3>
+      <div>
+        <h3>Не делаем</h3>
         <ul>
-          <li><b>Тон</b><span>«Скидка!», «Успей!», капслок, стрелки и таймеры</span></li>
+          <li><b>Тон</b><span>«Скидка», «Успей», капслок, стрелки и таймеры</span></li>
           <li><b>Монтаж</b><span>Склейки каждую секунду без смысла</span></li>
           <li><b>Музыка</b><span>Трэп и вирусные треки, которые спорят с одеждой</span></li>
           <li><b>Текст</b><span>Плашки с ценой в кадре и в первой строке подписи</span></li>
@@ -490,38 +324,38 @@ section{background-color:transparent}
 <div class="band"></div>
 <footer>
   <div class="logo">ZHIWJ<sup>®</sup></div>
-  <p>Central Asian fashion · ручная работа · Душанбе</p>
-  <small>Контент-план подготовлен студией 231inc</small>
+  <div>Central Asian fashion · ручная работа · Душанбе</div>
+  <div>Контент-план подготовлен студией 231inc</div>
 </footer>
 
 <script>
-const C = {pom:'#b8433a', ochre:'#c8893e', indigo:'#5a78ac', olive:'#8b9150', gold:'#c9a35a', plum:'#a05f8c'};
+const C = {};
 
 const REELS = [
-  {id:'r1', c:C.pom, date:'Пн · 09.11', title:'Тизер коллекции: Нафиса за машинкой',
+  {id:'r1', date:'Пн · 09.11', title:'Тизер коллекции: Нафиса за машинкой',
    about:'Открываем месяц одним спокойным кадром. Нафиса входит с отрезом атласа, садится за швейную машинку и начинает шить. Без слов, только звук машинки.',
    steps:['Статичный общий план: старая швейная машинка и стул на однотонном фоне (глубокий зелёный или гранатовый)','Нафиса в своём пиджаке из коллекции входит в кадр с отрезом атласа с орнаментом','Садится, расправляет ткань под иглой, начинает шить','Крупно: игла и атлас, переливы ткани','Резкий переход в чёрный, название коллекции и ZHIWJ'],
    facts:{'Длина':'15 с','Где':'Студия 231inc','Звук':'Низкий эмбиент + звук машинки'},
    cap:'Новая коллекция. Сшита вручную.',
    ref:{url:'https://www.instagram.com/reel/DcQG9h8sSXr/', video:'media/ref-03.mp4', poster:'media/ref-03.jpg', note:'Повторяем подачу: один кадр, фон, машинка. Снимаем с Нафисой.'}},
-  {id:'r2', c:C.ochre, date:'Пн · 16.11', title:'Как рождается пиджак',
+  {id:'r2', date:'Пн · 16.11', title:'Как рождается пиджак',
    about:'Процесс ручной работы: от атласа и лекал до вышитого орнамента. Показываем, почему каждый пиджак уникален.',
    steps:['Атлас разворачивают на столе, свет скользит по ткани','Мел и лекала: крой лацкана','Вышивка орнамента в макро, таймлапс','Примерка на манекене, булавки','Готовый пиджак на плечиках, медленный поворот'],
    facts:{'Длина':'25–30 с','Где':'Мастерская ZHIWJ','Звук':'Фортепиано + звуки мастерской'},
    cap:'Сколько часов в одном пиджаке?'},
-  {id:'r3', c:C.indigo, date:'Пт · 20.11', title:'Смена пиджаков',
+  {id:'r3', date:'Пт · 20.11', title:'Смена пиджаков',
    about:'Акцент только на пиджаках: лицо модели не видно, кадр от подбородка до пояса. Пиджаки сменяют друг друга в ритм музыки.',
    steps:['Кадр от подбородка до бёдер, модель стоит ровно, руки свободно','Переход движением: рука закрывает камеру, поворот или щелчок пальцами','С каждым переходом новый пиджак коллекции (5–7 моделей)','Между сменами — крупный план орнамента на лацкане или рукаве','Финал: все пиджаки на вешалке, логотип'],
    facts:{'Длина':'15–20 с','Где':'Студия 231inc, однотонный фон','Звук':'Ритмичный инструментал без слов'},
    cap:'Один крой. Семь характеров.',
    ref:{url:'https://www.instagram.com/p/De9pNMDGQWc/', photos:['media/ref-01-a.jpg','media/ref-01-b.jpg','media/ref-01-c.jpg'], note:'Как в референсе: внимание на пиджаках, лицо модели скрыто светом или тенью.'}},
-  {id:'r4', c:C.plum, date:'Ср · 25.11', title:'Помада и новый образ',
+  {id:'r4', date:'Ср · 25.11', title:'Помада и новый образ',
    about:'Модель крупно красит губы, затем идёт к камере, и на ходу меняется образ. Женственность и уверенность классического пиджака.',
    steps:['Крупно: модель красит губы, отражение в зеркале','Отходит от зеркала и идёт к камере','На шаге — склейка, и она уже в другом пиджаке','Ещё 2–3 смены образа на ходу','Финал: модель останавливается, взгляд в камеру, логотип'],
    facts:{'Длина':'15–20 с','Где':'Студия или коридор с красивым светом','Звук':'Спокойный, уверенный бит'},
    cap:'Образ начинается с деталей',
    ref:{url:'https://www.instagram.com/reel/DdjjdKoRryQ/', video:'media/ref-02.mp4', poster:'media/ref-02.jpg', note:'Приём из референса: крупный план в одном кадре и та же модель в глубине, на ходу меняется образ.'}},
-  {id:'r5', c:C.gold, date:'Ср · 02.12', title:'Финал: телефонный диалог',
+  {id:'r5', date:'Ср · 02.12', title:'Финал: телефонный диалог',
    about:'Закрываем месяц коротким остроумным диалогом. Нафиса в пиджаке из коллекции отвечает на звонок в винтажном кабинете.',
    dialog:[['Звонок','ZHIWJ, слушаю.'],['Голос','Атлас?'],['Нафиса','Да.'],['Голос','Орнамент?'],['Нафиса','Таджикский.'],['Голос','Ручная работа?'],['Нафиса','Каждый стежок.'],['Голос','Классика?'],['Нафиса','Всегда.'],['Голос','А чего вы не делаете?'],['Нафиса','Одинаковых вещей.']],
    steps:['Звонок старого телефона, Нафиса снимает трубку','Быстрые крупные планы: губы, рука на проводе, орнамент на рукаве, лацкан','Последняя реплика, пауза, улыбка в камеру','Кладёт трубку и уходит из кадра, логотип'],
@@ -531,74 +365,67 @@ const REELS = [
 ];
 
 const CAROUSELS = [
-  {id:'c1', c:C.ochre, date:'Ср · 11.11', title:'Детали крупно',
+  {id:'c1', date:'Ср · 11.11', title:'Детали крупно',
    about:'Первое знакомство с коллекцией через детали, до полного образа.',
    steps:['Обложка: атлас с орнаментом в макро','Лацкан и вышивка','Пуговицы и манжета','Подкладка изнутри','Строчка ручной работы','Последний слайд: пиджак целиком'],
    facts:{'Слайдов':'6–8','Формат':'4:5'}, cap:'Сначала — детали'},
-  {id:'c2', c:C.indigo, date:'Пт · 13.11', title:'Код орнамента',
+  {id:'c2', date:'Пт · 13.11', title:'Код орнамента',
    about:'Что значат таджикские узоры на пиджаках коллекции. Каждый слайд — один символ и его смысл.',
    steps:['Обложка: орнамент крупно и вопрос «Что здесь зашифровано?»','3–4 слайда: символ на пиджаке + короткое пояснение','Слайд про цвета: что значат гранатовый, золотой, индиго','Финал: пиджак целиком'],
    facts:{'Слайдов':'6–8','Текст':'Коротко, тонкий шрифт'}, cap:'Узор, который говорит'},
-  {id:'c3', c:C.pom, date:'Ср · 18.11', title:'Фотосессия коллекции',
+  {id:'c3', date:'Ср · 18.11', title:'Фотосессия коллекции',
    about:'Главная съёмка месяца. Снимаем у Нафисы в шоуруме или в студии 231inc. Из этой съёмки делаем и следующие карусели.',
    steps:['Обложка: самый сильный портрет в пиджаке','Полный рост на однотонном фоне','Сидя, детали рук и рукава','Пара кадров в движении','Пиджак с разными низами: брюки, юбка, джинсы'],
    facts:{'Слайдов':'8–10','Где':'Шоурум Нафисы или студия 231inc'}, cap:'Классика, расшитая орнаментом',
    ref:{url:'https://www.instagram.com/p/DfFFAJCmDXa/', photos:['media/ref-04-a.jpg','media/ref-04-b.jpg','media/ref-04-c.jpg'], wide:true, note:'Такую съёмку можно сделать у Нафисы или у нас в студии.'}},
-  {id:'c4', c:C.olive, date:'Пн · 23.11', title:'Один пиджак — три образа',
+  {id:'c4', date:'Пн · 23.11', title:'Один пиджак — три образа',
    about:'Как носить пиджак ZHIWJ в разных ситуациях. Показываем, что это вещь не только для праздника.',
    steps:['Обложка: три образа рядом','Офис: брюки, белая рубашка','Вечер: платье или атласная юбка','Праздник или свадьба: с национальными украшениями','Финал: пиджак отдельно'],
    facts:{'Слайдов':'5–7','Формат':'4:5'}, cap:'Офис, вечер, праздник'},
-  {id:'c5', c:C.gold, date:'Пт · 27.11', title:'Нафиса и её коллекция',
+  {id:'c5', date:'Пт · 27.11', title:'Нафиса и её коллекция',
    about:'Портрет основательницы: откуда идея коллекции, что вдохновило. Её цитаты на слайдах.',
    steps:['Обложка: портрет Нафисы в пиджаке','Нафиса в мастерской с эскизами','2–3 слайда с её цитатами о коллекции','Нафиса и мастерицы','Финал: подпись Нафисы'],
    facts:{'Слайдов':'6–8','Текст':'Цитаты Нафисы'}, cap:'«Я хотела, чтобы классика говорила на нашем языке»'},
-  {id:'c6', c:C.plum, date:'Пн · 30.11', title:'Вся коллекция',
+  {id:'c6', date:'Пн · 30.11', title:'Вся коллекция',
    about:'Лукбук всех моделей коллекции. У каждого пиджака имя и короткое описание.',
    steps:['Обложка: все модели в одном кадре','По слайду на каждый пиджак: имя, ткань, орнамент','Последний слайд: как заказать'],
    facts:{'Слайдов':'8–10','Формат':'4:5'}, cap:'Вся коллекция в одном посте'}
 ];
 
+
+const WD={'Пн':'Пн','Ср':'Ср','Пт':'Пт'}, MON={'11':'ноября','12':'декабря'};
+const parse = s => { const [w,d]=s.split(' · '); const [dd,mm]=d.split('.'); return {w, dd:+dd, mm, key:+mm*100+ +dd}; };
 function refBlock(r){
   if(!r) return '';
-  let media = '';
-  if (r.video) media = `<div class="rvid"><video src="${r.video}" poster="${r.poster}" controls playsinline preload="metadata"></video></div>`;
-  if (r.photos) media = `<div class="rphotos ${r.wide?'wide':''}">${r.photos.map(p=>`<img src="${p}" alt="Референс">`).join('')}</div>`;
-  return `<div class="ref"><div class="lbl">Референс</div><div class="note">${r.note}</div>${media}
-    <a class="orig" href="${r.url}" target="_blank" rel="noopener">Оригинал в Instagram ↗</a></div>`;
+  let media='';
+  if (r.video) media=`<div class="rvid"><video src="${r.video}" poster="${r.poster}" controls playsinline preload="metadata"></video></div>`;
+  if (r.photos) media=`<div class="rphotos ${r.wide?'wide':''}">${r.photos.map(p=>`<img src="${p}" alt="Кадр из референса">`).join('')}</div>`;
+  return `<aside class="ref"><small>Референс</small><p>${r.note}</p>${media}<a class="orig" href="${r.url}" target="_blank" rel="noopener">Оригинал в Instagram ↗</a></aside>`;
 }
-function ideaCard(x, i, kind){
-  const dlg = x.dialog ? `<div class="dialog">${x.dialog.map(([w,t])=>`<div><b>${w}</b><span class="${w==='Нафиса'?'n':''}">${t}</span></div>`).join('')}</div>` : '';
-  return `<article class="idea ${x.ref?'':'noref'}" id="${x.id}" style="--c:${x.c}">
+function ideaCard(x,i,kind){
+  const p=parse(x.date);
+  const dlg=x.dialog?`<div class="dialog">${x.dialog.map(([w,t])=>`<div><b>${w}</b><span class="${w==='Нафиса'?'n':''}">${t}</span></div>`).join('')}</div>`:'';
+  return `<article class="idea ${x.ref?'':'noref'}" id="${x.id}">
     <div>
-      <div class="top"><span class="no">${kind} ${String(i+1).padStart(2,'0')}</span><span class="pill date">${x.date}</span></div>
+      <div class="meta"><span>${kind} ${i+1}</span><span>·</span><span class="when">${p.w}, ${p.dd} ${MON[p.mm]}</span></div>
       <h3>${x.title}</h3>
       <p class="about">${x.about}</p>
       ${dlg}
       <ol class="steps">${x.steps.map(s=>`<li>${s}</li>`).join('')}</ol>
       <div class="facts">${Object.entries(x.facts).map(([k,v])=>`<span>${k}: <b>${v}</b></span>`).join('')}</div>
-      <div class="cap">«${x.cap}»</div>
+      <div class="cap"><div class="stitch"></div><small>Первая строка подписи</small><q>${x.cap.replace(/^«|»$/g,'')}</q></div>
     </div>
     ${refBlock(x.ref)}
   </article>`;
 }
-document.getElementById('reelList').innerHTML = REELS.map((x,i)=>ideaCard(x,i,'Рилс')).join('');
-document.getElementById('carList').innerHTML = CAROUSELS.map((x,i)=>ideaCard(x,i,'Карусель')).join('');
-
-// timeline
-const all = [...REELS.map(x=>({...x,k:'Рилс'})), ...CAROUSELS.map(x=>({...x,k:'Карусель'}))]
-  .map(x=>{const [dd,mm]=x.date.split('· ')[1].split('.'); return {...x, dd, mm, wd:x.date.split(' ·')[0], key:+mm*100+ +dd};})
-  .sort((a,b)=>a.key-b.key);
-const weeks = [['Неделя 1',911,915],['Неделя 2',916,922],['Неделя 3',923,929],['Неделя 4',1130,1206]];
-const wk = k => k>=1130 ? 3 : k>=1123 ? 2 : k>=1116 ? 1 : 0;
-const light = h => {const n=parseInt(h.slice(1),16);let r=n>>16,g=n>>8&255,b=n&255;const t=.5;return `rgb(${Math.round(r+(255-r)*t)},${Math.round(g+(255-g)*t)},${Math.round(b+(255-b)*t)})`;};
-document.getElementById('timeline').innerHTML = weeks.map((w,wi)=>`
-  <div class="tl-week"><h4>${w[0]}</h4>
-  ${all.filter(x=>wk(x.key)===wi).map(x=>`
-    <a class="tl-item" href="#${x.id}">
-      <div class="d"><b>${x.dd}</b><span>${x.wd} · ${x.mm==='11'?'ноя':'дек'}</span></div>
-      <div><div class="t" style="color:${light(x.c)}">${x.k}</div><div class="h">${x.title}</div></div>
-    </a>`).join('')}
-  </div>`).join('');
+document.getElementById('reelList').innerHTML=REELS.map((x,i)=>ideaCard(x,i,'Рилс')).join('');
+document.getElementById('carList').innerHTML=CAROUSELS.map((x,i)=>ideaCard(x,i,'Карусель')).join('');
+const all=[...REELS.map(x=>({...x,k:'Рилс'})),...CAROUSELS.map(x=>({...x,k:'Карусель'}))].map(x=>({...x,...parse(x.date)})).sort((a,b)=>a.key-b.key);
+const wk=k=>k>=1130?3:k>=1123?2:k>=1116?1:0;
+const W=['Неделя 1 · 9–13 ноября','Неделя 2 · 16–20 ноября','Неделя 3 · 23–27 ноября','Неделя 4 · 30 ноября — 2 декабря'];
+document.getElementById('timeline').innerHTML=W.map((w,wi)=>`<div class="tl-week"><h4>${w}</h4>${all.filter(x=>wk(x.key)===wi).map(x=>`
+  <a class="tl-item" href="#${x.id}"><div class="d"><b>${x.dd}</b><span>${x.w}</span></div>
+  <div><div class="t"><i class="dot ${x.k==='Рилс'?'':'o'}"></i>${x.k}</div><div class="h">${x.title}</div></div></a>`).join('')}</div>`).join('');
 </script>
 </body>
 </html>
