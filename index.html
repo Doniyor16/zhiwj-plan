@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZHIWJ — контент-план</title>
+<meta name="description" content="Контент-план Instagram для ZHIWJ: рубрики, календарь съёмок и референсы.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#f6efe3;
+  --paper:#fbf7f0;
+  --sand:#eadcc4;
+  --ochre:#c8893e;
+  --gold:#b8913f;
+  --pomegranate:#8e2b2b;
+  --indigo:#1f2f4a;
+  --olive:#5d6338;
+  --ink:#2a211b;
+  --muted:#7a6a5a;
+  --line:#dccbb0;
+  --serif:'Cormorant Garamond', 'Times New Roman', serif;
+  --sans:'Manrope', system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+
+/* ---------- ornament bands ---------- */
+.band{height:28px;background-color:var(--pomegranate);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cg fill='none' stroke='%23e9c98a' stroke-width='1.4'%3E%3Cpath d='M0 14 L14 2 L28 14 L14 26 Z'/%3E%3Cpath d='M28 14 L42 2 L56 14 L42 26 Z'/%3E%3C/g%3E%3Cg fill='%23e9c98a'%3E%3Ccircle cx='14' cy='14' r='3'/%3E%3Ccircle cx='42' cy='14' r='3'/%3E%3Ccircle cx='28' cy='14' r='1.4'/%3E%3Ccircle cx='0' cy='14' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat:repeat-x;background-position:center}
+.band.indigo{background-color:var(--indigo)}
+.band.thin{height:14px;background-size:28px 14px}
+
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* ---------- nav ---------- */
+nav{position:sticky;top:0;z-index:20;background:rgba(246,239,227,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+.logo{font-family:var(--serif);font-weight:600;font-size:24px;letter-spacing:.14em;text-decoration:none}
+.logo sup{font-size:10px;letter-spacing:0}
+nav ul{display:flex;gap:26px;list-style:none;font-size:14px}
+nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
+nav ul a:hover{color:var(--pomegranate)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:96px 0 110px;overflow:hidden;background:
+  radial-gradient(ellipse at 80% 20%, rgba(200,137,62,.18), transparent 55%),
+  radial-gradient(ellipse at 10% 90%, rgba(142,43,43,.10), transparent 50%), var(--cream)}
+.hero .rosette-big{position:absolute;right:-140px;top:50%;transform:translateY(-50%);width:620px;height:620px;opacity:.9;pointer-events:none}
+.hero .rosette-big use{animation:spin 160s linear infinite;transform-origin:center}
+@keyframes spin{to{transform:rotate(360deg)}}
+.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--ochre);font-weight:600}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(48px,8vw,104px);line-height:.95;margin:22px 0 26px;max-width:720px}
+.hero h1 em{color:var(--pomegranate);font-style:italic}
+.hero p.lead{font-size:19px;max-width:560px;color:#4a3d33}
+.hero .meta{display:flex;flex-wrap:wrap;gap:34px;margin-top:46px}
+.hero .meta div{border-left:2px solid var(--ochre);padding-left:14px}
+.hero .meta b{display:block;font-family:var(--serif);font-size:38px;font-weight:500;line-height:1}
+.hero .meta span{font-size:13px;color:var(--muted)}
+
+/* ---------- sections ---------- */
+section{padding:96px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:46px;flex-wrap:wrap}
+.sec-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(36px,5vw,58px);line-height:1}
+.sec-head p{max-width:440px;color:var(--muted)}
+.divider{display:flex;align-items:center;gap:14px;color:var(--gold);margin-bottom:18px}
+.divider::before,.divider::after{content:"";height:1px;flex:1;background:var(--line)}
+.divider svg{width:26px;height:26px}
+
+/* ---------- mood ---------- */
+.mood{background:var(--paper)}
+.mood-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.mood-card{background:var(--cream);border:1px solid var(--line);border-radius:4px;padding:26px 22px}
+.mood-card h3{font-family:var(--serif);font-size:24px;font-weight:600;margin-bottom:8px}
+.mood-card p{font-size:14.5px;color:#55473c}
+.palette{display:flex;gap:10px;margin-top:34px;flex-wrap:wrap}
+.swatch{flex:1;min-width:110px;height:92px;border-radius:4px;display:flex;align-items:flex-end;padding:10px 12px;font-size:12px;color:#fff;letter-spacing:.04em}
+.swatch.light{color:var(--ink)}
+
+/* ---------- rubrics ---------- */
+.rubrics{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.rubric{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:30px 26px 26px;overflow:hidden}
+.rubric::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--c)}
+.rubric .num{font-family:var(--serif);font-size:15px;color:var(--c);font-weight:600;letter-spacing:.1em}
+.rubric h3{font-family:var(--serif);font-size:30px;font-weight:500;line-height:1.1;margin:8px 0 12px}
+.rubric p{font-size:15px;color:#55473c}
+.rubric .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.tag{font-size:12px;padding:4px 10px;border-radius:20px;background:var(--cream);border:1px solid var(--line);color:var(--muted)}
+.rubric .share{position:absolute;right:22px;top:24px;font-family:var(--serif);font-size:34px;color:var(--c);opacity:.85}
+
+/* ---------- calendar ---------- */
+.cal{background:var(--indigo);color:var(--cream);position:relative}
+.cal .sec-head p{color:#b9bfcc}
+.weeks-nav{display:flex;gap:10px;margin-bottom:34px;flex-wrap:wrap}
+.weeks-nav button{font:inherit;font-size:14px;padding:10px 18px;border-radius:30px;border:1px solid rgba(233,201,138,.4);background:transparent;color:var(--cream);cursor:pointer;transition:all .2s}
+.weeks-nav button.on,.weeks-nav button:hover{background:#e9c98a;color:var(--indigo);border-color:#e9c98a}
+.week{display:none}
+.week.on{display:block}
+.week-title{font-family:var(--serif);font-size:28px;margin-bottom:6px}
+.week-sub{color:#b9bfcc;font-size:14px;margin-bottom:24px}
+.days{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.day{background:rgba(255,255,255,.05);border:1px solid rgba(233,201,138,.22);border-radius:4px;padding:22px 20px;display:flex;flex-direction:column}
+.day .date{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:14px}
+.day .date b{font-family:var(--serif);font-size:36px;font-weight:500;line-height:1;color:#e9c98a}
+.day .date span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#b9bfcc}
+.day .rub{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--c);font-weight:600;margin-bottom:6px}
+.day h4{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.15;margin-bottom:10px}
+.day p{font-size:14px;color:#d7d9df;flex:1}
+.day .cap{margin-top:14px;padding-top:12px;border-top:1px dashed rgba(233,201,138,.3);font-family:var(--serif);font-style:italic;font-size:17px;color:#f2e3c4}
+.day .fmt{margin-top:10px;font-size:12px;color:#9aa3b5}
+.stories{margin-top:44px;display:grid;grid-template-columns:1.1fr 2fr;gap:26px;align-items:start;border-top:1px solid rgba(233,201,138,.22);padding-top:38px}
+.stories h3{font-family:var(--serif);font-size:32px;font-weight:500}
+.stories ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 26px;font-size:14.5px;color:#d7d9df}
+.stories li{padding-left:22px;position:relative}
+.stories li::before{content:"";position:absolute;left:0;top:8px;width:9px;height:9px;transform:rotate(45deg);border:1.5px solid #e9c98a}
+
+/* ---------- videos ---------- */
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+.vcard{background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:flex;flex-direction:column}
+.vframe{position:relative;aspect-ratio:9/16;background:#1b1612;overflow:hidden;cursor:pointer}
+.vframe video{width:100%;height:100%;object-fit:cover}
+.vframe .play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;transition:opacity .25s;background:linear-gradient(to top,rgba(0,0,0,.35),transparent 50%)}
+.vframe .play span{width:64px;height:64px;border-radius:50%;background:rgba(246,239,227,.92);display:flex;align-items:center;justify-content:center}
+.vframe.playing .play{opacity:0}
+.vbody{padding:18px 18px 20px}
+.vbody .rub{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--c,var(--ochre))}
+.vbody h4{font-family:var(--serif);font-size:22px;font-weight:500;line-height:1.15;margin:6px 0 8px}
+.vbody p{font-size:14px;color:#55473c}
+.empty{border:1.5px dashed var(--line);border-radius:4px;padding:60px 24px;text-align:center;color:var(--muted)}
+.empty b{display:block;font-family:var(--serif);font-size:28px;font-weight:500;color:var(--ink);margin-bottom:6px}
+
+/* ---------- rules ---------- */
+.rules{background:var(--paper)}
+.rules-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:4px;overflow:hidden}
+.rules-grid > div{padding:30px 30px}
+.rules-grid .yes{background:var(--cream)}
+.rules-grid .no{background:#efe5d6}
+.rules-grid h3{font-family:var(--serif);font-size:28px;font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.rules-grid ul{list-style:none;display:grid;gap:12px;font-size:15px}
+.rules-grid li{display:grid;grid-template-columns:110px 1fr;gap:14px}
+.rules-grid li b{font-weight:600;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-top:2px}
+
+/* ---------- footer ---------- */
+footer{background:var(--ink);color:#cbbfae;padding:60px 0 40px;text-align:center}
+footer .logo{color:var(--cream);font-size:34px}
+footer p{margin-top:12px;font-size:14px}
+footer small{display:block;margin-top:28px;color:#8b7f70;font-size:12px}
+
+@media (max-width:960px){
+  .mood-grid{grid-template-columns:1fr 1fr}
+  .days{grid-template-columns:1fr 1fr}
+  .stories{grid-template-columns:1fr}
+  .hero .rosette-big{opacity:.35;right:-260px}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  nav ul{display:none}
+  section{padding:68px 0}
+  .hero{padding:70px 0 80px}
+  .mood-grid,.days,.rules-grid{grid-template-columns:1fr}
+  .stories ul{grid-template-columns:1fr}
+  .rules-grid li{grid-template-columns:1fr;gap:2px}
+  .hero .meta{gap:22px}
+  .hero .rosette-big{opacity:.12;width:520px;height:520px;right:-300px}
+}
+@media (prefers-reduced-motion:reduce){.hero .rosette-big use{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- reusable suzani rosette -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <g id="petal8">
+      <ellipse cx="0" cy="-58" rx="16" ry="34"/>
+    </g>
+    <symbol id="rosette" viewBox="-200 -200 400 400">
+      <g fill="none" stroke="#b8913f" stroke-width="1.2" opacity=".55">
+        <circle r="196"/><circle r="186" stroke-dasharray="2 7"/>
+      </g>
+      <g fill="#8e2b2b" opacity=".9">
+        <g id="ring1">
+          <ellipse cx="0" cy="-150" rx="22" ry="38"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(30)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(60)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(90)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(120)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(150)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(180)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(210)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(240)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(270)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(300)"/>
+          <ellipse cx="0" cy="-150" rx="22" ry="38" transform="rotate(330)"/>
+        </g>
+      </g>
+      <g fill="#c8893e">
+        <circle cx="0" cy="-150" r="7"/><circle cx="0" cy="-150" r="7" transform="rotate(30)"/><circle cx="0" cy="-150" r="7" transform="rotate(60)"/><circle cx="0" cy="-150" r="7" transform="rotate(90)"/><circle cx="0" cy="-150" r="7" transform="rotate(120)"/><circle cx="0" cy="-150" r="7" transform="rotate(150)"/><circle cx="0" cy="-150" r="7" transform="rotate(180)"/><circle cx="0" cy="-150" r="7" transform="rotate(210)"/><circle cx="0" cy="-150" r="7" transform="rotate(240)"/><circle cx="0" cy="-150" r="7" transform="rotate(270)"/><circle cx="0" cy="-150" r="7" transform="rotate(300)"/><circle cx="0" cy="-150" r="7" transform="rotate(330)"/>
+      </g>
+      <circle r="104" fill="#1f2f4a"/>
+      <g fill="#e9c98a">
+        <ellipse cx="0" cy="-66" rx="13" ry="30"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(45)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(90)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(135)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(180)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(225)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(270)"/><ellipse cx="0" cy="-66" rx="13" ry="30" transform="rotate(315)"/>
+      </g>
+      <circle r="30" fill="#8e2b2b"/>
+      <circle r="30" fill="none" stroke="#e9c98a" stroke-width="2" stroke-dasharray="3 5"/>
+      <circle r="12" fill="#c8893e"/>
+      <circle r="104" fill="none" stroke="#e9c98a" stroke-width="1.5"/>
+      <circle r="96" fill="none" stroke="#e9c98a" stroke-width="1" stroke-dasharray="1 6"/>
+    </symbol>
+    <symbol id="mini" viewBox="-20 -20 40 40">
+      <g fill="currentColor"><ellipse cx="0" cy="-10" rx="4" ry="8"/><ellipse cx="0" cy="-10" rx="4" ry="8" transform="rotate(90)"/><ellipse cx="0" cy="-10" rx="4" ry="8" transform="rotate(180)"/><ellipse cx="0" cy="-10" rx="4" ry="8" transform="rotate(270)"/></g>
+      <circle r="4" fill="currentColor"/>
+    </symbol>
+  </defs>
+</svg>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">ZHIWJ<sup>®</sup></a>
+    <ul>
+      <li><a href="#mood">Настроение</a></li>
+      <li><a href="#rubrics">Рубрики</a></li>
+      <li><a href="#plan">Календарь</a></li>
+      <li><a href="#videos">Видео</a></li>
+      <li><a href="#rules">Стиль</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="band"></div>
+
+<header class="hero" id="top">
+  <svg class="rosette-big" aria-hidden="true"><use href="#rosette"/></svg>
+  <div class="wrap" style="position:relative">
+    <div class="eyebrow">Контент-план Instagram · 9 ноября — 6 декабря 2026</div>
+    <h1>Каждая вещь — <em>история</em>, сшитая руками</h1>
+    <p class="lead">План для @_zhiwj_ на четыре недели: что снимаем, в каком настроении и о чём рассказываем. Без агрессивной рекламы: показываем ремесло, узоры и людей, которые за ними стоят.</p>
+    <div class="meta">
+      <div><b>16</b><span>рилсов и каруселей</span></div>
+      <div><b>7</b><span>постоянных рубрик</span></div>
+      <div><b>4</b><span>публикации в неделю</span></div>
+      <div><b>3–5</b><span>сторис каждый день</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="band indigo thin"></div>
+
+<section class="mood" id="mood">
+  <div class="wrap">
+    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="sec-head">
+      <h2>Тихая роскошь<br>Шёлкового пути</h2>
+      <p>Спокойно, тепло, с достоинством. Зритель должен почувствовать ткань, услышать шорох ножниц и захотеть рассмотреть узор.</p>
+    </div>
+    <div class="mood-grid">
+      <div class="mood-card"><h3>Свет</h3><p>Мягкий и тёплый: золотой час, окно мастерской, свечи. Никакой вспышки и холодного белого.</p></div>
+      <div class="mood-card"><h3>Камера</h3><p>Медленные проезды, крупно руки и ткань, статичные кадры-картины. 3–6 кадров на ролик.</p></div>
+      <div class="mood-card"><h3>Звук</h3><p>Рубоб, дутар, най, фортепиано. Живые звуки: ножницы, машинка, льющийся чай.</p></div>
+      <div class="mood-card"><h3>Слово</h3><p>Спокойный голос за кадром на таджикском или русском, с субтитрами. Одна короткая фраза в кадре.</p></div>
+    </div>
+    <div class="palette">
+      <div class="swatch" style="background:#8e2b2b">Гранат</div>
+      <div class="swatch" style="background:#c8893e">Охра</div>
+      <div class="swatch" style="background:#b8913f">Золото</div>
+      <div class="swatch" style="background:#5d6338">Олива</div>
+      <div class="swatch" style="background:#1f2f4a">Индиго</div>
+      <div class="swatch light" style="background:#eadcc4">Лён</div>
+    </div>
+  </div>
+</section>
+
+<section id="rubrics">
+  <div class="wrap">
+    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="sec-head">
+      <h2>Рубрики</h2>
+      <p>Семь рубрик, которые чередуются каждую неделю. Процент — доля рубрики в публикациях месяца.</p>
+    </div>
+    <div class="rubrics" id="rubricList"></div>
+  </div>
+</section>
+
+<div class="band"></div>
+
+<section class="cal" id="plan">
+  <div class="wrap">
+    <div class="divider" style="color:#e9c98a"><svg><use href="#mini"/></svg></div>
+    <div class="sec-head">
+      <h2>Календарь публикаций</h2>
+      <p>Публикуем в понедельник, среду, пятницу и воскресенье. По понедельникам идёт сериал «Как рождается вещь»: весь месяц следим за одним платьем от ткани до примерки.</p>
+    </div>
+    <div class="weeks-nav" id="weeksNav"></div>
+    <div id="weeks"></div>
+
+    <div class="stories">
+      <h3>Сторис<br>каждый день</h3>
+      <ul>
+        <li>Утро в мастерской: чай, свет, первая нитка</li>
+        <li>Опросы «Какой цвет вышивки выбрать?»</li>
+        <li>Наличие, размеры, цены и адрес шоурума</li>
+        <li>Репосты клиенток и отметок бренда</li>
+        <li>Закулисье съёмок рилсов этой недели</li>
+        <li>Хайлайты: Заказ · Мастерская · Коллекции · Отзывы · Доставка</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="band indigo"></div>
+
+<section id="videos">
+  <div class="wrap">
+    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="sec-head">
+      <h2>Видео и референсы</h2>
+      <p>Ролики, на которые ориентируемся по настроению, ритму и подаче. Нажмите на видео, чтобы посмотреть.</p>
+    </div>
+    <div class="vgrid" id="videoList"></div>
+  </div>
+</section>
+
+<section class="rules" id="rules">
+  <div class="wrap">
+    <div class="divider"><svg><use href="#mini"/></svg></div>
+    <div class="sec-head">
+      <h2>Правила стиля</h2>
+      <p>Короткая памятка для съёмки, монтажа и подписей. По ней сверяем каждую публикацию.</p>
+    </div>
+    <div class="rules-grid">
+      <div class="yes">
+        <h3><svg width="22" height="22" style="color:var(--olive)"><use href="#mini"/></svg>Делаем</h3>
+        <ul>
+          <li><b>Начало</b><span>Первые 2 секунды — самый красивый кадр: ткань, рука, пар от чая</span></li>
+          <li><b>Длина</b><span>15–40 секунд, одна мысль на ролик, 9:16</span></li>
+          <li><b>Финал</b><span>Фирменный кадр с логотипом ZHIWJ на ткани или чёрном фоне</span></li>
+          <li><b>Подпись</b><span>Строка-образ, 2–4 предложения истории, мягкое «Шьём на заказ»</span></li>
+          <li><b>Локации</b><span>Мастерская, шоурум, старые дворики, сад, чайхана, горы</span></li>
+          <li><b>Сетка</b><span>Обложки рилсов в одной гамме, чтобы профиль выглядел как галерея</span></li>
+        </ul>
+      </div>
+      <div class="no">
+        <h3><svg width="22" height="22" style="color:var(--pomegranate)"><use href="#mini"/></svg>Не делаем</h3>
+        <ul>
+          <li><b>Тон</b><span>«Скидка!», «Успей!», капслок, стрелки и таймеры</span></li>
+          <li><b>Монтаж</b><span>Нарезку из 20 кадров со склейкой каждую секунду</span></li>
+          <li><b>Музыка</b><span>Трэп и вирусные треки, которые спорят с одеждой</span></li>
+          <li><b>Текст</b><span>Плашки с ценой в кадре и в первой строке подписи</span></li>
+          <li><b>Свет</b><span>Холодный белый свет, вспышку, неоновые цвета</span></li>
+          <li><b>Фон</b><span>Торговые центры, парковки и случайный интерьер</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band"></div>
+<footer>
+  <div class="logo">ZHIWJ<sup>®</sup></div>
+  <p>Central Asian fashion · ручная работа · Душанбе</p>
+  <small>Контент-план подготовлен студией 231inc</small>
+</footer>
+
+<script>
+const RUBRICS = {
+  birth:  {n:'01', name:'Как рождается вещь', c:'#8e2b2b', share:'25%', text:'Путь одного изделия: эскиз, выбор ткани, крой, вышивка, готовое платье. Сериал из 3–4 эпизодов.', tags:['Рилс 20–40 с','Звуки мастерской']},
+  picture:{n:'02', name:'Живая картина', c:'#c8893e', share:'20%', text:'Одна красивая сцена-образ: модель, чай, цветы, горы. Почти без движения камеры, как ожившая миниатюра.', tags:['Рилс 10–15 с','Без текста']},
+  code:   {n:'03', name:'Код узора', c:'#1f2f4a', share:'15%', text:'Что значат гранат, птица Шохин, миндаль, солнце и цвета, и где их найти на изделиях ZHIWJ.', tags:['Карусель 6–8 слайдов','Рилс с голосом']},
+  hands:  {n:'04', name:'Руки мастериц', c:'#5d6338', share:'10%', text:'Портреты швей и вышивальщиц: имя, стаж, любимая часть работы, сколько часов уходит на изделие.', tags:['Рилс 30–45 с','Голос героини']},
+  nafisa: {n:'05', name:'Слово Нафисы', c:'#b8913f', share:'10%', text:'Основательница о вдохновении, коллекциях и культуре. Спокойно, как в беседе за чаем.', tags:['Рилс 30–60 с','Субтитры']},
+  wear:   {n:'06', name:'Как это носить', c:'#a0522d', share:'10%', text:'Национальный элемент в современном образе: город, офис, свадьба, Навруз, путешествие.', tags:['Карусель','Рилс 15 с']},
+  heroes: {n:'07', name:'Наши героини', c:'#6b3a5a', share:'10%', text:'Клиентки в ZHIWJ, их слова о вещах, события и коллаборации бренда.', tags:['Рилс','Карусель','Репост']}
+};
+
+const WEEKS = [
+  {title:'Неделя 1 · Знакомство', sub:'Голос бренда и начало сериала', days:[
+    {d:'09',m:'ноя',w:'пн',r:'nafisa',t:'Почему ZHIWJ шьёт вручную',i:'Нафиса за столом с чаем, перебивки: мастерская, руки, ткань. Рассказ о том, зачем бренд держится за ручную работу.',cap:'Каждую вещь ZHIWJ кто-то долго держал в руках',f:'Рилс 40 с'},
+    {d:'11',m:'ноя',w:'ср',r:'birth',t:'Эпизод 1. Ткань',i:'Руки перебирают лён, хлопок и винтажные отрезы. Шорох ткани, свет из окна.',cap:'Всё начинается с ткани',f:'Рилс 20 с'},
+    {d:'13',m:'ноя',w:'пт',r:'picture',t:'Гранатовый сад',i:'Модель в гранатовом платье разламывает плод, зёрна падают в пиалу.',cap:'Осень пахнет гранатом',f:'Рилс 12 с'},
+    {d:'15',m:'ноя',w:'вс',r:'code',t:'Гранат в узорах',i:'Гранат как символ семьи и изобилия. Где он встречается на изделиях ZHIWJ.',cap:'Почему на наших платьях так часто гранат',f:'Карусель 7 слайдов'}
+  ]},
+  {title:'Неделя 2 · Ремесло', sub:'Люди и вещи в жизни', days:[
+    {d:'16',m:'ноя',w:'пн',r:'birth',t:'Эпизод 2. Крой',i:'Мел на ткани, крупно ножницы и звук разреза, лекала на столе.',cap:'Ножницы не торопятся',f:'Рилс 25 с'},
+    {d:'18',m:'ноя',w:'ср',r:'hands',t:'Знакомство со швеёй',i:'Портрет мастерицы: имя, стаж, любимая часть работы. Её голос, субтитры.',cap:'Познакомьтесь: руки, которые шьют ZHIWJ',f:'Рилс 40 с'},
+    {d:'20',m:'ноя',w:'пт',r:'wear',t:'Национальное на каждый день',i:'Чапан или жилет с вышивкой, джинсы и белая рубашка. Утро в Душанбе, кофе, улица.',cap:'Национальное — это не только праздник',f:'Рилс 15 с'},
+    {d:'22',m:'ноя',w:'вс',r:'picture',t:'Чайхана',i:'Дастархан, две подруги в ZHIWJ, пар над пиалами. Продолжение эстетики «Фараджи».',cap:'Время, которое не хочется торопить',f:'Рилс 12 с'}
+  ]},
+  {title:'Неделя 3 · Смыслы', sub:'Узоры, героини и вдохновение', days:[
+    {d:'23',m:'ноя',w:'пн',r:'birth',t:'Эпизод 3. Вышивка',i:'Тамбурная вышивка в макро: игла, нить, узор растёт. Таймлапс и живой звук.',cap:'Стежок за стежком',f:'Рилс 30 с'},
+    {d:'25',m:'ноя',w:'ср',r:'code',t:'Птица Шохин',i:'Что значит символ и как он появился на форме Shohin Airlines.',cap:'Птица, которая теперь летает над облаками',f:'Рилс 30 с с голосом'},
+    {d:'27',m:'ноя',w:'пт',r:'heroes',t:'Платье для праздника',i:'Клиентка на свадьбе или торжестве в ZHIWJ, пара её слов о платье (с её согласия).',cap:'Осень — время свадеб. И историй',f:'Рилс 20 с'},
+    {d:'29',m:'ноя',w:'вс',r:'nafisa',t:'Вдохновение Шёлкового пути',i:'Нафиса в музее или у старой архитектуры: что вдохновляет её в наследии региона.',cap:'Шёлковый путь не закончился — он в наших руках',f:'Рилс 45 с'}
+  ]},
+  {title:'Неделя 4 · Финал', sub:'Готовое платье и благодарность', days:[
+    {d:'30',m:'ноя',w:'пн',r:'birth',t:'Финал. Готово',i:'Последний шов, утюг, модель надевает платье, медленный поворот.',cap:'Вот она — вещь, за которой вы следили месяц',f:'Рилс 25 с'},
+    {d:'02',m:'дек',w:'ср',r:'wear',t:'Одно платье — три повода',i:'Будни, праздник, путешествие: одно изделие в трёх образах.',cap:'Одно платье, три жизни',f:'Карусель 5 слайдов'},
+    {d:'04',m:'дек',w:'пт',r:'picture',t:'Первый снег',i:'Горы, модель в стёганом чапане держит пиалу, пар от чая на морозе.',cap:'Первый снег и тёплый чапан',f:'Рилс 12 с'},
+    {d:'06',m:'дек',w:'вс',r:'hands',t:'Сколько рук у одного платья',i:'Мастерицы по очереди передают одно платье из рук в руки. Благодарность команде.',cap:'Сколько рук у одного платья?',f:'Рилс 30 с'}
+  ]}
+];
+
+/* Видео: файлы лежат в папке videos/. Добавьте объект — карточка появится сама.
+   { file:'videos/01.mp4', poster:'videos/01.jpg', r:'picture', title:'...', note:'...' } */
+const VIDEOS = [];
+
+// ---------- render ----------
+const rl = document.getElementById('rubricList');
+Object.values(RUBRICS).forEach(r => {
+  rl.insertAdjacentHTML('beforeend', `
+    <article class="rubric" style="--c:${r.c}">
+      <span class="share">${r.share}</span>
+      <div class="num">${r.n}</div>
+      <h3>${r.name}</h3>
+      <p>${r.text}</p>
+      <div class="tags">${r.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+    </article>`);
+});
+
+const nav = document.getElementById('weeksNav'), wk = document.getElementById('weeks');
+WEEKS.forEach((w, i) => {
+  nav.insertAdjacentHTML('beforeend', `<button data-i="${i}" class="${i===0?'on':''}">Неделя ${i+1} · ${w.days[0].d}.${w.days[0].m==='ноя'?'11':'12'}</button>`);
+  wk.insertAdjacentHTML('beforeend', `
+    <div class="week ${i===0?'on':''}" data-i="${i}">
+      <div class="week-title">${w.title}</div>
+      <div class="week-sub">${w.sub}</div>
+      <div class="days">${w.days.map(d => { const r = RUBRICS[d.r]; return `
+        <div class="day" style="--c:${lighten(r.c)}">
+          <div class="date"><b>${d.d}</b><span>${d.w} · ${d.m}</span></div>
+          <div class="rub">${r.name}</div>
+          <h4>${d.t}</h4>
+          <p>${d.i}</p>
+          <div class="cap">«${d.cap}»</div>
+          <div class="fmt">${d.f}</div>
+        </div>`}).join('')}</div>
+    </div>`);
+});
+nav.addEventListener('click', e => {
+  const b = e.target.closest('button'); if (!b) return;
+  nav.querySelectorAll('button').forEach(x => x.classList.toggle('on', x === b));
+  wk.querySelectorAll('.week').forEach(x => x.classList.toggle('on', x.dataset.i === b.dataset.i));
+});
+function lighten(hex){ // brighter tone for dark background
+  const n = parseInt(hex.slice(1),16); let r=n>>16, g=n>>8&255, b=n&255;
+  const k = .45; r=Math.round(r+(255-r)*k); g=Math.round(g+(255-g)*k); b=Math.round(b+(255-b)*k);
+  return `rgb(${r},${g},${b})`;
+}
+
+const vl = document.getElementById('videoList');
+if (!VIDEOS.length) {
+  vl.outerHTML = `<div class="empty"><b>Видео скоро появятся</b>Здесь будут референсы и первые снятые ролики.</div>`;
+} else {
+  VIDEOS.forEach(v => {
+    const r = RUBRICS[v.r] || {};
+    vl.insertAdjacentHTML('beforeend', `
+      <article class="vcard" style="--c:${r.c||'#c8893e'}">
+        <div class="vframe">
+          <video src="${v.file}" ${v.poster?`poster="${v.poster}"`:''} playsinline loop preload="metadata"></video>
+          <div class="play"><span><svg width="22" height="22" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="#8e2b2b"/></svg></span></div>
+        </div>
+        <div class="vbody">
+          ${r.name?`<div class="rub">${r.name}</div>`:''}
+          <h4>${v.title}</h4>
+          <p>${v.note||''}</p>
+        </div>
+      </article>`);
+  });
+  vl.addEventListener('click', e => {
+    const f = e.target.closest('.vframe'); if (!f) return;
+    const vid = f.querySelector('video');
+    document.querySelectorAll('.vframe video').forEach(x => { if (x !== vid) { x.pause(); x.parentElement.classList.remove('playing'); }});
+    if (vid.paused) { vid.play(); f.classList.add('playing'); } else { vid.pause(); f.classList.remove('playing'); }
+  });
+}
+</script>
+</body>
+</html>
