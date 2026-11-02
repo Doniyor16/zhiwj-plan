@@ -80,9 +80,19 @@ section{padding-block:96px}
 
 /* mood */
 .mood{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 64px}
-.palette{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:40px}
-.swatch{height:80px;border-radius:8px;display:flex;align-items:flex-end;padding:8px 12px;font-size:13px;color:#f4ecdf}
-.swatch.light{color:#1b1713}
+.palette{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin-top:40px}
+.swatch{position:relative;height:168px;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;justify-content:flex-end;gap:2px;padding:12px 16px;color:#f4ecdf;
+  background:
+    linear-gradient(112deg,transparent 18%,rgba(255,255,255,.16) 30%,rgba(255,255,255,.04) 40%,transparent 52%,rgba(255,255,255,.10) 66%,transparent 76%),
+    linear-gradient(180deg,rgba(255,255,255,.06),transparent 40%,rgba(0,0,0,.34)),
+    repeating-linear-gradient(0deg,rgba(0,0,0,.05) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.035) 0 1px,transparent 1px 3px),
+    var(--sw);
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.06),0 8px 24px rgba(0,0,0,.35)}
+.swatch b{font-family:var(--display);font-size:22px;font-weight:600;line-height:1.1}
+.swatch span{font-size:12px;opacity:.85}
+.swatch .hex{opacity:.6;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.swatch.light{color:#2a2219}
 
 /* ideas */
 .ideas{display:grid;gap:24px}
@@ -230,12 +240,12 @@ footer .logo{color:var(--text);font-size:32px}
       <ul class="terms"><li><b>Звук</b><span>Рубоб, дутар, фортепиано. Живые звуки: машинка, ножницы, шорох атласа</span></li><li><b>Слово</b><span>Минимум текста в кадре. Короткие фразы, спокойный голос, субтитры</span></li></ul>
     </div>
     <div class="palette">
-      <div class="swatch" style="background:#9e2f2f">Гранат</div>
-      <div class="swatch" style="background:#b97a35">Охра</div>
-      <div class="swatch" style="background:#a8873f">Золото</div>
-      <div class="swatch" style="background:#585d34">Олива</div>
-      <div class="swatch" style="background:#22355a">Индиго</div>
-      <div class="swatch light" style="background:#e6d8c0">Лён</div>
+      <div class="swatch" style="--sw:#7e1d22"><b>Гранат</b><span>Атлас, глубокий красный</span><span class="hex">#7E1D22</span></div>
+      <div class="swatch" style="--sw:#a8692a"><b>Охра</b><span>Глина и шёлк</span><span class="hex">#A8692A</span></div>
+      <div class="swatch" style="--sw:#b08a3e"><b>Золото</b><span>Золотая нить</span><span class="hex">#B08A3E</span></div>
+      <div class="swatch" style="--sw:#4f5230"><b>Олива</b><span>Бархат, оливковый</span><span class="hex">#4F5230</span></div>
+      <div class="swatch" style="--sw:#1c2a4a"><b>Индиго</b><span>Натуральный индиго</span><span class="hex">#1C2A4A</span></div>
+      <div class="swatch light" style="--sw:#d8cbb0"><b>Лён</b><span>Небелёный лён</span><span class="hex">#D8CBB0</span></div>
     </div>
   </div>
 </section>
